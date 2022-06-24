@@ -1,12 +1,12 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/JNSBOT/JNS_FC_BOT.git /JNS_FC_BOT
+  git clone https://github.com/NoobEditorCodes/XtremeCoreUpdated.git /XtremeCoreUpdated
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /JNS_FC_BOT
+  git clone $UPSTREAM_REPO /XtremeCoreUpdated
 fi
-cd /JNS_FC_BOT
+cd /XtremeCoreUpdated
 pip3 install -U -r requirements.txt
-echo "Starting Bot...."
+echo "Starting Bot 🦋🦋"
 python3 bot.py
