@@ -1,4 +1,4 @@
-# Kanged From @TroJanZheX
+# Kanged From @TechnoMindz
 import asyncio
 import re
 import ast
@@ -1180,7 +1180,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == 'filenos':
         await query.answer("=>I have only this much files 😰 \n To get more results do request as per tips 👉🏻 ", True)
     elif query.data == 'inform':
-        await query.answer("⚠︎ Information ⚠︎\n\nAfter 3 minutes this message will be automatically deleted\n\nIf you do not see the requested movie / series file, look at the next page\n\nⒸ @TmMainChannel", True)
+        await query.answer("⚠︎ Information ⚠︎\n\nAfter 5 minutes this message will be automatically deleted\n\nIf you do not see the requested movie / series file, look at the next page\n\nⒸ @TmMainChannel", True)
     try: await query.answer('Im Watching YOU 👀') 
     except: pass
 
@@ -1311,7 +1311,12 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
     
     await asyncio.sleep(DELETE_TIME)
     await fmsg.delete()
-    await message.reply_text(text=f"📢 Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code>\nBʏ <spoiler>{message.from_user.mention}</spoiler>\nIs Now Cʟᴏꜱᴇᴅ 😀\n\nMade By @TmMainChannel", disable_notification = True)
+    await client.send_video(
+                chat_id=message.chat.id,
+                video="https://telegra.ph/file/0cddf1c687a0dbc256313.mp4",
+                caption=f"📢 Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code>\nBʏ <spoiler>{message.from_user.mention}</spoiler>\nIs Now Cʟᴏꜱᴇᴅ 😀\n\n@TmMainChannel",
+                reply_to_message_id=message.message_id
+            )
     await msg.delete()
 
     if spoll:
