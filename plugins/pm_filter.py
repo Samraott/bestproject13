@@ -1307,7 +1307,7 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
             logger.exception(e)
             fmsg = await message.reply_photo(photo='https://telegra.ph/file/b417bdd01331179d5787c.jpg', caption=cap, reply_markup=InlineKeyboardMarkup(btn))
     else:
-        fmsg = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+        fmsg = await message.reply_photo(photo='https://telegra.ph/file/b417bdd01331179d5787c.jpg', caption=cap, reply_markup=InlineKeyboardMarkup(btn))
     
     await asyncio.sleep(DELETE_TIME)
     await fmsg.delete()
