@@ -719,8 +719,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             disable_web_page_preview=True
         )
         await query.answer('ᴍᴀɴᴜᴀʟ ғɪʟᴛᴇʀ ᴛᴏᴏʟs.......')
-        
-    ]]
+
+    elif query.data == "button":
+        buttons = [[
+            InlineKeyboardButton('ミ★𝘉𝘈𝘊𝘒★彡', callback_data='manual')
+        ]]
         r=await query.message.reply_text('▣▣▢▢▢▢')
         a=await r.edit('▣▣▣▢▢▢')
         v=await a.edit('▣▣▣▣▢▢')
