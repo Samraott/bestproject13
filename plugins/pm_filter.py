@@ -1,4 +1,4 @@
-# Kanged From @TechnoMindz
+# Kanged From @TechnoMindz and @RaviTechnoMindz
 import asyncio
 import re
 import ast
@@ -48,7 +48,7 @@ async def next_page(bot, query):
         offset = 0
     search = BUTTONS.get(key)
     if not search:
-        await query.answer("You Are Using My Old Messages🥲,Try Asking Again 🤠", show_alert=True)
+        await query.answer("You Are Using My Old Messages🥲,Try Asking Again 🤠", show_alert=True)#Techno Mindz
         return
 
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
@@ -92,7 +92,7 @@ async def next_page(bot, query):
             ])
 
     btn.insert(0, [
-        InlineKeyboardButton("🤖𓂀ℍ𝕆𝕎 𝕋𝕆 𝔻𝕆𝕎ℕ𝕃𝕆𝔸𝔻𓂀🤖", url="https://t.me/tmmainchannel/4")
+        InlineKeyboardButton("🤖𓂀ℍ𝕆𝕎 𝕋𝕆 𝔻𝕆𝕎ℕ𝕃𝕆𝔸𝔻𓂀🤖", url="https://t.me/tmmainchannel/4")#Techno Mindz
     ])
 
     if 0 < offset <= 10:
@@ -110,7 +110,7 @@ async def next_page(bot, query):
     elif off_set is None:
         btn.append(
             [InlineKeyboardButton(f"🗓 {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
-             InlineKeyboardButton("𝓝𝓔𝓧𝓣 ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])
+             InlineKeyboardButton("𝓝𝓔𝓧𝓣 ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])#Techno Mindz
     else:
         btn.append(
             [
@@ -137,9 +137,9 @@ async def advantage_spoll_choker(bot, query):
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.message_id)
     if not movies:
-        return await query.answer("You Are Using My Old Messages🥲,Try Asking Again 🤠 ", show_alert=True)
+        return await query.answer("You Are Using My Old Messages🥲,Try Asking Again 🤠 ", show_alert=True)#Techno Mindz
     movie = movies[(int(movie_))]
-    await query.answer('just a second...searching....🧐 ')
+    await query.answer('just a second...searching....🧐 ')#TechnoMindz
     k = await manual_filters(bot, query.message, text=movie)
     if k == False:
         files, offset, total_results = await get_search_results(movie, offset=0, filter=True)
@@ -148,7 +148,7 @@ async def advantage_spoll_choker(bot, query):
             await auto_filter(bot, query, k)
         else:
             one_button = InlineKeyboardMarkup([[InlineKeyboardButton("🥲 𝗢𝗪𝗡𝗘𝗥 🔥", url="https://t.me/TechnoKillerBot"), InlineKeyboardButton("🤕 𝗚𝗢𝗢𝗚𝗟𝗘 🤒", url="https://www.google.com/")]])
-            k = await msg.reply("Hey, 𝐒𝐨𝐫𝐫𝐲, 𝐍𝐨 𝐌𝐨𝐯𝐢𝐞/𝐒𝐞𝐫𝐢𝐞𝐬 𝐑𝐞𝐥𝐚𝐭𝐞𝐝 𝐓𝐨 𝐓𝐡𝐞 𝐆𝐢𝐯𝐞𝐧 𝐖𝐨𝐫𝐝 𝐖𝐚𝐬 𝐅𝐨𝐮𝐧𝐝 🥺\n\n𝙿𝚘𝚜𝚜𝚒𝚋𝚕𝚎 𝙲𝚊𝚞𝚜𝚎𝚜 : 🤔\n\n⭕️ 𝐍𝐨𝐭 𝐑𝐞𝐥𝐞𝐚𝐬𝐞𝐝 𝐘𝐞𝐭\n⭕️ 𝐈𝐧𝐜𝐨𝐫𝐫𝐞𝐜𝐭 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠\n⭕ 𝐍𝐨𝐭 𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐝 𝐁𝐲 𝐎𝐰𝐧𝐞𝐫\n\n👉Contact To My Owner👇", reply_markup = one_button)
+            k = await msg.reply("Hey, 𝐒𝐨𝐫𝐫𝐲, 𝐍𝐨 𝐌𝐨𝐯𝐢𝐞/𝐒𝐞𝐫𝐢𝐞𝐬 𝐑𝐞𝐥𝐚𝐭𝐞𝐝 𝐓𝐨 𝐓𝐡𝐞 𝐆𝐢𝐯𝐞𝐧 𝐖𝐨𝐫𝐝 𝐖𝐚𝐬 𝐅𝐨𝐮𝐧𝐝 🥺\n\n𝙿𝚘𝚜𝚜𝚒𝚋𝚕𝚎 𝙲𝚊𝚞𝚜𝚎𝚜 : 🤔\n\n⭕️ 𝐍𝐨𝐭 𝐑𝐞𝐥𝐞𝐚𝐬𝐞𝐝 𝐘𝐞𝐭\n⭕️ 𝐈𝐧𝐜𝐨𝐫𝐫𝐞𝐜𝐭 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠\n⭕ 𝐍𝐨𝐭 𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐝 𝐁𝐲 𝐎𝐰𝐧𝐞𝐫\n\n👉Contact To My Owner👇", reply_markup = one_button)#Spell check reply
             await asyncio.sleep(20)
             await k.delete()
             await msg.delete()
@@ -171,13 +171,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("Make sure I'm present in your group!! 🥴 \n\n@TmMainChannel", quote=True)
-                    return await query.answer('Im Watching YOU 👀')
+                    return await query.answer('⏳Loading...')
             else:
                 await query.message.edit_text(
                     "I'm not connected to any groups!\nCheck /connections or connect to any groups 🥴 ",
                     quote=True
                 )
-                return await query.answer('Im Watching YOU 👀')
+                return await query.answer('⏳Loading...')
 
         elif chat_type in ["group", "supergroup"]:
             grp_id = query.message.chat.id
@@ -238,7 +238,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=keyboard,
             parse_mode="md"
         )
-        return await query.answer('Im Watching YOU 👀')
+        return await query.answer('⏳Loading...')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -259,7 +259,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         else:
             await query.message.edit_text('Some error occurred!!', parse_mode="md")
-        return await query.answer('Im Watching YOU 👀')
+        return await query.answer('⏳Loading...')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -282,7 +282,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode="md"
             )
-        return await query.answer('Im Watching YOU 👀')
+        return await query.answer('⏳Loading...')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -300,7 +300,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode="md"
             )
-        return await query.answer('Im Watching YOU 👀')
+        return await query.answer('⏳Loading...')
     elif query.data == "backcb":
         await query.answer()
 
@@ -311,7 +311,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 "There are no active connections!! Connect to some groups first.",
             )
-            return await query.answer('Im Watching YOU 👀')
+            return await query.answer('⏳Loading...')
         buttons = []
         for groupid in groupids:
             try:
@@ -351,7 +351,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         files_ = await get_file_details(file_id)
         if not files_:
-            return await query.answer('No such file exist.')
+            return await query.answer('No such file exist.')#After joining the forecesub (Refreshing) 
         files = files_[0]
         title = files.file_name
         size = get_size(files.file_size)
@@ -383,7 +383,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False 
                 )
-                await query.answer('𝖢𝗁𝖾𝖼𝗄 𝗆𝗒 𝗉𝗆 🤠 , I have sent you 😉', show_alert=True)
+                await query.answer('𝖢𝗁𝖾𝖼𝗄 𝗆𝗒 𝗉𝗆 🤠 , I have sent you 😉', show_alert=True)#if Pm Mode ON 
         except UserIsBlocked:
             await query.answer('Unblock the bot mahn ! 🤬🤬 ', show_alert=True)
         except PeerIdInvalid:
@@ -429,7 +429,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             msg = await client.send_cached_media(
                 chat_id=AUTH_CHANNEL,
                 file_id=file_id,
-                caption=f'<b>Hi 👋 {query.from_user.mention} \n☵☵☵☵☵☵☵☵☵☵☵☵☵\n\n</b>\n 📁 ➜ [@TmMainChannel] <code> {title}</code>\n\n☄️⚡️𝗔𝗟𝗟 𝗠𝗢𝗩𝗜𝗘𝗦 𝗛𝗘𝗥𝗘⚡️☄️\n\n𝙍𝙚𝙦𝙪𝙚𝙨𝙩 𝙔𝙤𝙪𝙧 𝙈𝙤𝙫𝙞𝙚𝙨 𝙃𝙚𝙧𝙚 𝙖𝙣𝙙 𝙂𝙚𝙩 𝙄𝙣 1 𝙈𝙞𝙣𝙪𝙩𝙚 100℅👇\n@TechnoMoviesCollection\n\n𝕊𝕌𝔹𝕊ℂℝ𝕀𝔹𝔼 𝕆𝕌ℝ 𝕐𝕆𝕌𝕋𝕌𝔹𝔼 ℂℍ𝔸ℕℕ𝔼𝕃 🥰 👇\nhttps://www.youtube.com/c/TechnoMindz\n\n🔗 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞 ☞@TmMainChannel\n\n⚠️ This file will be deleted in 5 minute as it has copyright ... !!!\n\n Download only After moving from here to saved message or somewhere else..!!!\n\n╔═══ 𝐉𝐨𝐢𝐧 𝐖𝐢𝐭𝐡 𝐔𝐬 ═══╗\n\n<a href="https://t.me/tmmainchannel">1☞𝙅𝙤𝙞𝙣 𝙊𝙛𝙛𝙞𝙘𝙞𝙖𝙡 𝘾𝙝𝙖𝙣𝙣𝙚𝙡</a>\n\n<a href="https://t.me/technomoviescollection">2☞ 𝙅𝙤𝙞𝙣 𝙈𝙤𝙫𝙞𝙚𝙨 𝙂𝙧𝙤𝙪𝙥</a>\n\n<a href="https://t.me/technomindzchat">3☞ 𝙅𝙤𝙞𝙣 𝘾𝙝𝙖𝙩𝙩𝙞𝙣𝙜 𝙂𝙧𝙤𝙪𝙥</a>\n\n╚═══ 𝐉𝐨𝐢𝐧 𝐖𝐢𝐭𝐡 𝐔𝐬 ═══╝\n<i><b>🤩Requested Group {query.message.chat.title}</b></i>\n\n<b>♥️ 𝗧𝗲𝗮𝗺 ➜ @TmMainChannel</b>\n\n✯ ━━━━━ ✧ ━━━━━ ✯',
+                caption=f'<b>Hi 👋 {query.from_user.mention} \n☵☵☵☵☵☵☵☵☵☵☵☵☵\n\n</b>\n 📁 ➜ [@TmMainChannel] <code> {title}</code>\n\n☄️⚡️𝗔𝗟𝗟 𝗠𝗢𝗩𝗜𝗘𝗦 𝗛𝗘𝗥𝗘⚡️☄️\n\n𝙍𝙚𝙦𝙪𝙚𝙨𝙩 𝙔𝙤𝙪𝙧 𝙈𝙤𝙫𝙞𝙚𝙨 𝙃𝙚𝙧𝙚 𝙖𝙣𝙙 𝙂𝙚𝙩 𝙄𝙣 1 𝙈𝙞𝙣𝙪𝙩𝙚 100℅👇\n@TechnoMoviesCollection\n\n𝕊𝕌𝔹𝕊ℂℝ𝕀𝔹𝔼 𝕆𝕌ℝ 𝕐𝕆𝕌𝕋𝕌𝔹𝔼 ℂℍ𝔸ℕℕ𝔼𝕃 🥰 👇\nhttps://www.youtube.com/c/TechnoMindz\n\n🔗 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞 ☞@TmMainChannel\n\n⚠️ This file will be deleted in 5 minute as it has copyright ... !!!\n\n Download only After moving from here to saved message or somewhere else..!!!\n\n╔═══ 𝐉𝐨𝐢𝐧 𝐖𝐢𝐭𝐡 𝐔𝐬 ═══╗\n\n<a href="https://t.me/tmmainchannel">1☞𝙅𝙤𝙞𝙣 𝙊𝙛𝙛𝙞𝙘𝙞𝙖𝙡 𝘾𝙝𝙖𝙣𝙣𝙚𝙡</a>\n\n<a href="https://t.me/technomoviescollection">2☞ 𝙅𝙤𝙞𝙣 𝙈𝙤𝙫𝙞𝙚𝙨 𝙂𝙧𝙤𝙪𝙥</a>\n\n<a href="https://t.me/technomindzchat">3☞ 𝙅𝙤𝙞𝙣 𝘾𝙝𝙖𝙩𝙩𝙞𝙣𝙜 𝙂𝙧𝙤𝙪𝙥</a>\n\n╚═══ 𝐉𝐨𝐢𝐧 𝐖𝐢𝐭𝐡 𝐔𝐬 ═══╝\n<i><b>🤩Requested Group {query.message.chat.title}</b></i>\n\n<b>♥️ 𝗧𝗲𝗮𝗺 ➜ @TmMainChannel</b>\n\n✯ ━━━━━ ✧ ━━━━━ ✯',#Custom Caption
                 protect_content=True if ident == "filep" else False 
             )
             msg1 = await query.message.reply(
@@ -444,7 +444,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                             InlineKeyboardButton('🦋 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 𝐋𝐈𝐍𝐊 🦋', url = msg.link)
                         ],                       
                         [
-                            InlineKeyboardButton("✧🎀𝐂𝐀𝐍'𝐓 𝐀𝐂𝐂𝐄𝐒𝐒❓ 𝐂𝐋𝐈𝐂𝐊 𝐇𝐄𝐑𝐄🎀✧", url=f'https://t.me/+AhuGzoZgPdEzMTBl')
+                            InlineKeyboardButton("✧🎀𝐂𝐀𝐍'𝐓 𝐀𝐂𝐂𝐄𝐒𝐒❓ 𝐂𝐋𝐈𝐂𝐊 𝐇𝐄𝐑𝐄🎀✧", url=f'https://t.me/+AhuGzoZgPdEzMTBl')#Add Your url where the file need to come
                         ]
                     ]
                 )
@@ -720,61 +720,40 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
         await query.answer('ᴍᴀɴᴜᴀʟ ғɪʟᴛᴇʀ ᴛᴏᴏʟs.......')
         
-    elif query.data == "button":
-        buttons = [[
-            InlineKeyboardButton('ミ★𝘉𝘈𝘊𝘒★彡', callback_data='manual')
-        ]]
-        reply1 = await query.message.reply_text(
-            text="▢▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply2 = await reply1.edit_text(
-            text="▣▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply3 = await reply2.edit_text(
-            text="▣▣▢"
-        )
-        await asyncio.sleep(0.5)
-        reply4 = await reply3.edit_text(
-            text="▣▣▣"
-        )
-        await reply4.delete()
+    ]]
+        r=await query.message.reply_text('▣▣▢▢▢▢')
+        a=await r.edit('▣▣▣▢▢▢')
+        v=await a.edit('▣▣▣▣▢▢')
+        i=await v.edit('▣▣▣▣▣▢')
+        n=await i.edit('▣▣▣▣▣▣')
+        await asyncio.sleep(1)
+        await n.delete()
+        await query.answer("Loading Buttons Module...")
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.BUTTON_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer("ʙᴜᴛᴛᴏɴ ғᴏʀᴍᴀᴛs ʜᴇʀᴇ.................")
       
     elif query.data == "autofilter":
         buttons = [[
             InlineKeyboardButton('ミ★𝘉𝘈𝘊𝘒★彡', callback_data='filter1')
         ]]
-        reply1 = await query.message.reply_text(
-            text="▢▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply2 = await reply1.edit_text(
-            text="▣▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply3 = await reply2.edit_text(
-            text="▣▣▢"
-        )
-        await asyncio.sleep(0.5)
-        reply4 = await reply3.edit_text(
-            text="▣▣▣"
-        )
-        await reply4.delete()
+        r=await query.message.reply_text('▣▣▢▢▢▢')
+        a=await r.edit('▣▣▣▢▢▢')
+        v=await a.edit('▣▣▣▣▢▢')
+        i=await v.edit('▣▣▣▣▣▢')
+        n=await i.edit('▣▣▣▣▣▣')
+        await asyncio.sleep(1)
+        await n.delete()
+        await query.answer("Loading AutoFilter...")
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.AUTOFILTER_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer("ᴀᴜᴛᴏғɪʟᴛᴇʀ ᴛᴏᴏʟs....")
         
     elif query.data == "stats":
         await query.answer("Let Me Check Out My Status 😌")
@@ -782,22 +761,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ミ★𝘉𝘈𝘊𝘒★彡', callback_data='featuresS'),
             InlineKeyboardButton('♻️ʀᴇғʀᴇsʜ♻️', callback_data='rfrsh')
         ]]
-        reply1 = await query.message.reply_text(
-            text="▢▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply2 = await reply1.edit_text(
-            text="▣▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply3 = await reply2.edit_text(
-            text="▣▣▢"
-        )
-        await asyncio.sleep(0.5)
-        reply4 = await reply3.edit_text(
-            text="▣▣▣"
-        )
-        await reply4.delete()
+        r=await query.message.reply_text('▣▣▢▢▢▢')
+        a=await r.edit('▣▣▣▢▢▢')
+        v=await a.edit('▣▣▣▣▢▢')
+        i=await v.edit('▣▣▣▣▣▢')
+        n=await i.edit('▣▣▣▣▣▣')
+        await asyncio.sleep(1)
+        await n.delete()
+        await query.answer("Checking My Status...")
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
         users = await db.total_users_count()
@@ -819,22 +790,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ミ★𝘉𝘈𝘊𝘒★彡', callback_data='featuresS'),
             InlineKeyboardButton('♻️ʀᴇғʀᴇsʜ♻️', callback_data='rfrsh')
         ]]
-        reply1 = await query.message.reply_text(
-            text="▢▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply2 = await reply1.edit_text(
-            text="▣▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply3 = await reply2.edit_text(
-            text="▣▣▢"
-        )
-        await asyncio.sleep(0.5)
-        reply4 = await reply3.edit_text(
-            text="▣▣▣"
-        )
-        await reply4.delete()
+        r=await query.message.reply_text('▣▣▢▢▢▢')
+        a=await r.edit('▣▣▣▢▢▢')
+        v=await a.edit('▣▣▣▣▢▢')
+        i=await v.edit('▣▣▣▣▣▢')
+        n=await i.edit('▣▣▣▣▣▣')
+        await asyncio.sleep(1)
+        await n.delete()
+        await query.answer("Loading...")
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
         users = await db.total_users_count()
@@ -867,22 +830,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('ミ★𝘉𝘈𝘊𝘒★彡', callback_data='featuresS')
         ]]
-        reply1 = await query.message.reply_text(
-            text="▢▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply2 = await reply1.edit_text(
-            text="▣▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply3 = await reply2.edit_text(
-            text="▣▣▢"
-        )
-        await asyncio.sleep(0.5)
-        reply4 = await reply3.edit_text(
-            text="▣▣▣"
-        )
-        await reply4.delete()
+        r=await query.message.reply_text('▣▣▢▢▢▢')
+        a=await r.edit('▣▣▣▢▢▢')
+        v=await a.edit('▣▣▣▣▢▢')
+        i=await v.edit('▣▣▣▣▣▢')
+        n=await i.edit('▣▣▣▣▣▣')
+        await asyncio.sleep(1)
+        await n.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.delete()
         await query.message.reply(
@@ -912,22 +866,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('ミ★𝘉𝘈𝘊𝘒★彡', callback_data='featuresS')
         ]]
-        reply1 = await query.message.reply_text(
-            text="▢▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply2 = await reply1.edit_text(
-            text="▣▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply3 = await reply2.edit_text(
-            text="▣▣▢"
-        )
-        await asyncio.sleep(0.5)
-        reply4 = await reply3.edit_text(
-            text="▣▣▣"
-        )
-        await reply4.delete()
+        r=await query.message.reply_text('▣▣▢▢▢▢')
+        a=await r.edit('▣▣▣▢▢▢')
+        v=await a.edit('▣▣▣▣▢▢')
+        i=await v.edit('▣▣▣▣▣▢')
+        n=await i.edit('▣▣▣▣▣▣')
+        await asyncio.sleep(1)
+        await n.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.delete()
         await query.message.reply(
@@ -942,22 +887,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('ミ★𝘉𝘈𝘊𝘒★彡', callback_data='featuresS')
         ]]
-        reply1 = await query.message.reply_text(
-            text="▢▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply2 = await reply1.edit_text(
-            text="▣▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply3 = await reply2.edit_text(
-            text="▣▣▢"
-        )
-        await asyncio.sleep(0.5)
-        reply4 = await reply3.edit_text(
-            text="▣▣▣"
-        )
-        await reply4.delete()
+        r=await query.message.reply_text('▣▣▢▢▢▢')
+        a=await r.edit('▣▣▣▢▢▢')
+        v=await a.edit('▣▣▣▣▢▢')
+        i=await v.edit('▣▣▣▣▣▢')
+        n=await i.edit('▣▣▣▣▣▣')
+        await asyncio.sleep(1)
+        await n.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.delete()
         await query.message.reply(
@@ -996,22 +932,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('ミ★𝘉𝘈𝘊𝘒★彡', callback_data='toolsjns')
         ]]
-        reply1 = await query.message.reply_text(
-            text="▢▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply2 = await reply1.edit_text(
-            text="▣▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply3 = await reply2.edit_text(
-            text="▣▣▢"
-        )
-        await asyncio.sleep(0.5)
-        reply4 = await reply3.edit_text(
-            text="▣▣▣"
-        )
-        await reply4.delete()
+        r=await query.message.reply_text('▣▣▢▢▢▢')
+        a=await r.edit('▣▣▣▢▢▢')
+        v=await a.edit('▣▣▣▣▢▢')
+        i=await v.edit('▣▣▣▣▣▢')
+        n=await i.edit('▣▣▣▣▣▣')
+        await asyncio.sleep(1)
+        await n.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.delete()
         await query.message.reply(
@@ -1026,22 +953,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('ミ★𝘉𝘈𝘊𝘒★彡', callback_data='toolsjns')
         ]]
-        reply1 = await query.message.reply_text(
-            text="▢▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply2 = await reply1.edit_text(
-            text="▣▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply3 = await reply2.edit_text(
-            text="▣▣▢"
-        )
-        await asyncio.sleep(0.5)
-        reply4 = await reply3.edit_text(
-            text="▣▣▣"
-        )
-        await reply4.delete()
+        r=await query.message.reply_text('▣▣▢▢▢▢')
+        a=await r.edit('▣▣▣▢▢▢')
+        v=await a.edit('▣▣▣▣▢▢')
+        i=await v.edit('▣▣▣▣▣▢')
+        n=await i.edit('▣▣▣▣▣▣')
+        await asyncio.sleep(1)
+        await n.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.delete()
         await query.message.reply(
@@ -1056,22 +974,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('ミ★𝘉𝘈𝘊𝘒★彡', callback_data='toolsjns')
         ]]
-        reply1 = await query.message.reply_text(
-            text="▢▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply2 = await reply1.edit_text(
-            text="▣▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply3 = await reply2.edit_text(
-            text="▣▣▢"
-        )
-        await asyncio.sleep(0.5)
-        reply4 = await reply3.edit_text(
-            text="▣▣▣"
-        )
-        await reply4.delete()
+        r=await query.message.reply_text('▣▣▢▢▢▢')
+        a=await r.edit('▣▣▣▢▢▢')
+        v=await a.edit('▣▣▣▣▢▢')
+        i=await v.edit('▣▣▣▣▣▢')
+        n=await i.edit('▣▣▣▣▣▣')
+        await asyncio.sleep(1)
+        await n.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.delete()
         await query.message.reply(
@@ -1086,22 +995,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('ミ★𝘉𝘈𝘊𝘒★彡', callback_data='toolsjns')
         ]]
-        reply1 = await query.message.reply_text(
-            text="▢▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply2 = await reply1.edit_text(
-            text="▣▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply3 = await reply2.edit_text(
-            text="▣▣▢"
-        )
-        await asyncio.sleep(0.5)
-        reply4 = await reply3.edit_text(
-            text="▣▣▣"
-        )
-        await reply4.delete()
+        r=await query.message.reply_text('▣▣▢▢▢▢')
+        a=await r.edit('▣▣▣▢▢▢')
+        v=await a.edit('▣▣▣▣▢▢')
+        i=await v.edit('▣▣▣▣▣▢')
+        n=await i.edit('▣▣▣▣▣▣')
+        await asyncio.sleep(1)
+        await n.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.delete()
         await query.message.reply(
@@ -1118,7 +1018,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if str(grp_id) != str(grpid):
             await query.message.edit("Your Active Connection Has Been Changed. Go To /settings.")
-            return await query.answer('Im Watching YOU 👀')
+            return await query.answer('✅Changed...')
 
         if status == "True" or status == "Chat":
             await save_group_settings(grpid, set_type, False)
@@ -1181,7 +1081,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer("=>I have only this much files 😰 \n To get more results do request as per tips 👉🏻 ", True)
     elif query.data == 'inform':
         await query.answer("⚠︎ Information ⚠︎\n\nAfter 5 minutes this message will be automatically deleted\n\nIf you do not see the requested movie / series file, look at the next page\n\nⒸ @TmMainChannel", True)
-    try: await query.answer('Im Watching YOU 👀') 
+    try: await query.answer('⏳Loading...') 
     except: pass
 
 
