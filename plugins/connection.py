@@ -12,7 +12,7 @@ logger.setLevel(logging.ERROR)
 async def addconnection(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM\n\n@TmMainChannel")
+        return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM\n\n@Movies_Series_1159")
     chat_type = message.chat.type
 
     if chat_type == "private":
@@ -42,7 +42,7 @@ async def addconnection(client, message):
     except Exception as e:
         logger.exception(e)
         await message.reply_text(
-            "Invalid Group ID!\n\nIf correct, Make sure I'm present in your group!!\n\n@TmMainChannel",
+            "Invalid Group ID!\n\nIf correct, Make sure I'm present in your group!!\n\n@Movies_Series_1159",
             quote=True,
         )
 
@@ -56,7 +56,7 @@ async def addconnection(client, message):
             addcon = await add_connection(str(group_id), str(userid))
             if addcon:
                 await message.reply_text(
-                    f"Successfully connected to **{title}**\nNow manage your group from my pm !\n\n@TmMainChannel",
+                    f"Successfully connected to **{title}**\nNow manage your group from my pm !\n\n@Movies_Series_1159",
                     quote=True,
                     parse_mode="md"
                 )
