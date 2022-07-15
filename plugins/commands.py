@@ -28,7 +28,7 @@ async def start(client, message: pyrogram.types.Message):
             'CAACAgUAAxkBAAEBHLhilcHI9LGFiorY11Cb41HiOT8XxgACbAYAAr4GsFT_LGNUHw4NliQE',
             reply_markup=InlineKeyboardMarkup(
                 [[
-                    InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇꜱ', url='https://t.me/VintageBotz')
+                    InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇꜱ', url='https://t.me/Updatesallmovies')
                 ],
                 [
                     InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', url=f"https://t.me/{temp.U_NAME}?start=help"),
@@ -53,11 +53,11 @@ async def start(client, message: pyrogram.types.Message):
             'CAACAgIAAxkBAALfhWKhyQAB6dM3e7xjAzNaNkDcJvRusAAChxUAAj0PUEnem2b91sejvx4E',
             reply_markup=InlineKeyboardMarkup(
                 [[
-                    InlineKeyboardButton('🧨 ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/CinemaVeedMovies')
+                    InlineKeyboardButton('🧨 ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/Movies_Series_1159')
                 ],
                 [
                     InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ʜᴇʀᴇ', switch_inline_query_current_chat=''),
-                    InlineKeyboardButton('👥 ɢʀᴏᴜᴘ', url='https://t.me/cinemaveed')
+                    InlineKeyboardButton('👥 ɢʀᴏᴜᴘ', url='https://t.me/Movies_Series_1159')
                 ],
                 [
                     InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
@@ -103,11 +103,11 @@ async def start(client, message: pyrogram.types.Message):
             'CAACAgIAAxkBAALfhWKhyQAB6dM3e7xjAzNaNkDcJvRusAAChxUAAj0PUEnem2b91sejvx4E',
             reply_markup=InlineKeyboardMarkup(
                 [[
-                    InlineKeyboardButton('🧨 ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/CinemaVeedMovies')
+                    InlineKeyboardButton('🧨 ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/Movies_Series_1159')
                 ],
                 [
                     InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ʜᴇʀᴇ', switch_inline_query_current_chat=''),
-                    InlineKeyboardButton('👥 ɢʀᴏᴜᴘ', url='https://t.me/cinemaveed')
+                    InlineKeyboardButton('👥 ɢʀᴏᴜᴘ', url='https://t.me/Movies_Series_1159')
                                          
                                          
                 ],
@@ -267,15 +267,15 @@ async def start(client, message: pyrogram.types.Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('⭕ ᴍᴏᴠɪᴇ ᴄᴏʟʟᴇᴄᴛɪᴏɴ', url="https://t.me/CinemaVeedMovies")
+                    InlineKeyboardButton('⭕ ᴍᴏᴠɪᴇ ᴄᴏʟʟᴇᴄᴛɪᴏɴ', url="https://t.me/Movies_Series_1159")
                                          
                 ],
                 [
-                    InlineKeyboardButton('⭕ ʀᴇǫ ᴍᴏᴠɪᴇ', url="https://t.me/cinemaveed"),
-                    InlineKeyboardButton('⭕ ʙᴏᴛ ᴜᴘᴅᴀᴛᴇs', url="https://t.me/VintageBotz")
+                    InlineKeyboardButton('⭕ ʀᴇǫ ᴍᴏᴠɪᴇ', url="https://t.me/Movies_Series_1159"),
+                    InlineKeyboardButton('⭕ ʙᴏᴛ ᴜᴘᴅᴀᴛᴇs', url="https://t.me/Updatesallmovies")
                 ],
                 [
-                    InlineKeyboardButton('⭕ ʙᴏᴛ sᴜᴘᴘᴏʀᴛ', url="https://t.me/VBotzSupport")
+                    InlineKeyboardButton('⭕ ʙᴏᴛ sᴜᴘᴘᴏʀᴛ', url="https://t.me/Updatesallmovies")
                 ]
             ]
         )
