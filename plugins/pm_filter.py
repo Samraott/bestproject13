@@ -1198,8 +1198,8 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>💖<STRONG>{search}</STRONG>💝\n𝗨𝗣𝗟𝗢𝗔𝗗𝗘𝗗 𝗕𝗬 ♪♪\n✨@Techno
-     \n\n⚙️ Nᴏᴛᴇ:→𝗧𝗵𝗶𝘀 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 𝗪𝗶𝗹𝗹 𝗕𝗲 𝗔𝘂𝘁𝗼-𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗔𝗳𝘁𝗲𝗿 5 𝗠𝗶𝗻𝘂𝘁𝗲 𝗧𝗼 𝗔𝘃𝗼𝗶𝗱 𝗖𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 𝗜𝘀𝘀𝘂𝗲𝘀.\n\n➥ 𝗝𝗼𝗶𝗻 ➼ 🔗@TmMainChannel</b> "
+        cap = f"<b>💖<STRONG>{search}</STRONG>💝\n\n⚙️ Nᴏᴛᴇ:→𝗧𝗵𝗶𝘀 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 𝗪𝗶𝗹𝗹 𝗕𝗲 𝗔𝘂𝘁𝗼-𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗔𝗳𝘁𝗲𝗿 5 𝗠𝗶𝗻𝘂𝘁𝗲 𝗧𝗼 𝗔𝘃𝗼𝗶𝗱 𝗖𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 𝗜𝘀𝘀𝘂𝗲𝘀.</b> "
+     
     if imdb and imdb.get('poster'):
         try:
             fmsg = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],#Imdb Poster Code
@@ -1219,7 +1219,7 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
     await client.send_video(
                 chat_id=message.chat.id,
                 video="https://telegra.ph/file/0cddf1c687a0dbc256313.mp4",
-                caption=f"📢 Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code>\nBʏ <spoiler>{message.from_user.mention}</spoiler>\nIs Now Cʟᴏꜱᴇᴅ 😀\n\n@TmMainChannel",
+                caption=f"📢 Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code>\nBʏ <spoiler>{message.from_user.mention}</spoiler>\nIs Now Cʟᴏꜱᴇᴅ 😀",
                 reply_to_message_id=message.message_id
             )
     await msg.delete()
@@ -1237,8 +1237,8 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        one_button = InlineKeyboardMarkup([[InlineKeyboardButton("🥲 𝗢𝗪𝗡𝗘𝗥 🔥", url="https://t.me/TechnoKillerBot"), InlineKeyboardButton("🤕 𝗚𝗢𝗢𝗚𝗟𝗘 🤒", url="https://www.google.com/")]])
-        k = await msg.reply_video(video="https://telegra.ph//file/d90256b1575c7aaadccc5.mp4", caption="Hey, 𝐒𝐨𝐫𝐫𝐲, 𝐍𝐨 𝐌𝐨𝐯𝐢𝐞/𝐒𝐞𝐫𝐢𝐞𝐬 𝐑𝐞𝐥𝐚𝐭𝐞𝐝 𝐓𝐨 𝐓𝐡𝐞 𝐆𝐢𝐯𝐞𝐧 𝐖𝐨𝐫𝐝 𝐖𝐚𝐬 𝐅𝐨𝐮𝐧𝐝 🥺\n\n𝙿𝚘𝚜𝚜𝚒𝚋𝚕𝚎 𝙲𝚊𝚞𝚜𝚎𝚜 : 🤔\n\n⭕️ 𝐍𝐨𝐭 𝐑𝐞𝐥𝐞𝐚𝐬𝐞𝐝 𝐘𝐞𝐭\n⭕️ 𝐈𝐧𝐜𝐨𝐫𝐫𝐞𝐜𝐭 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠\n⭕ 𝐍𝐨𝐭 𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐝 𝐁𝐲 𝐎𝐰𝐧𝐞𝐫\n\n👉Contact To My Owner👇", reply_markup = one_button)
+        one_button = InlineKeyboardMarkup([[InlineKeyboardButton("𝗔𝗗𝗠𝗜𝗡 🔥", url="https://t.me/cv_admbot"), InlineKeyboardButton("🤕 𝗚𝗢𝗢𝗚𝗟𝗘 🤒", url="https://www.google.com/")]])
+        k = await msg.reply_video(video="https://telegra.ph//file/d90256b1575c7aaadccc5.mp4", caption="ʜᴇʏ, sᴏʀʀʏ, ɴᴏ ᴍᴏᴠɪᴇ/sᴇʀɪᴇs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴡᴏʀᴅ ᴡᴀs ғᴏᴜɴᴅ 🥺\n\nᴘᴏssɪʙʟᴇ ᴄᴀᴜsᴇs : 🤔\n\n⭕️ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ ʏᴇᴛ\n⭕️ ɪɴᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ\n⭕ ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ᴏᴡɴᴇʀ\n\n👉Contact To Group Admin👇", reply_markup = one_button)
         await asyncio.sleep(15)
         await k.delete()
         await msg.delete()
