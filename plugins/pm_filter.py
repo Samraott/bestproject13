@@ -9,7 +9,7 @@ import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
 from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, AUTH_GROUPS, DELETE_TIME, P_TTI_SHOW_OFF, IMDB, REDIRECT_TO, \
-    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, START_IMAGE_URL, UNAUTHORIZED_CALLBACK_TEXT, redirected_env
+    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, START_IMAGE_URL, UNAUTHORIZED_CALLBACK_TEXT, DELETE_TIME, redirected_env
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
@@ -87,12 +87,12 @@ async def next_page(bot, query):
 
     btn.insert(0,
             [
-                InlineKeyboardButton("🎭 ᴍᴏᴠɪᴇs", url="https://t.me/CinemaVeed"),
-                InlineKeyboardButton("📢 ᴄʜᴀɴɴᴇʟ", url="https://t.me/CinemaVeedMovies")
+                InlineKeyboardButton("🎭 ᴍᴏᴠɪᴇs", url="https://t.me/Movies_Series_1159"),
+                InlineKeyboardButton("📢 ᴄʜᴀɴɴᴇʟ", url="https://t.me/Movies_Series_1159")
             ])
 
     btn.insert(0, [
-        InlineKeyboardButton("📥 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 📥", url="https://t.me/tmmainchannel/4")#Vintage Botz
+        InlineKeyboardButton("📥 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 📥", url="https://t.me/Updatesallmovies")#unknown
     ])
 
     if 0 < offset <= 10:
@@ -110,7 +110,7 @@ async def next_page(bot, query):
     elif off_set is None:
         btn.append(
             [InlineKeyboardButton(f"🗓 {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
-             InlineKeyboardButton("ɴᴇxᴛ ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])#Techno Mindz
+             InlineKeyboardButton("ɴᴇxᴛ ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])#unknown
     else:
         btn.append(
             [
@@ -137,9 +137,9 @@ async def advantage_spoll_choker(bot, query):
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.message_id)
     if not movies:
-        return await query.answer("You Are Using My Old Messages🥲,Try Asking Again 🤠 ", show_alert=True)#Techno Mindz
+        return await query.answer("You Are Using My Old Messages🥲,Try Asking Again 🤠 ", show_alert=True)#unknown
     movie = movies[(int(movie_))]
-    await query.answer('just a second...searching....🧐 ')#TechnoMindz
+    await query.answer('just a second...searching....🧐 ')#unknown
     k = await manual_filters(bot, query.message, text=movie)
     if k == False:
         files, offset, total_results = await get_search_results(movie, offset=0, filter=True)
@@ -184,13 +184,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             title = query.message.chat.title
 
         else:
-            return await query.answer('𝗌𝖺𝗇𝗍𝗁𝗈𝗌𝗁𝖺𝗆 𝖺𝗅𝗅𝖾')
+            return await query.answer('Hello Everyone')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == "creator") or (str(userid) in ADMINS):
             await del_all(query.message, grp_id, title)
         else:
-            await query.answer("You need to be Group Owner or an Auth User to do that! 😠 \n\n@TmMainChannel", show_alert=True)
+            await query.answer("You need to be Group Owner or an Auth User to do that! 😠 \n\n@Updatesallmovies", show_alert=True)
     elif query.data == "delallcancel":
         userid = query.from_user.id
         chat_type = query.message.chat.type
@@ -209,7 +209,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 except:
                     pass
             else:
-                await query.answer("That's not for you!! 🤐 ", show_alert=True)
+                await query.answer("Abee Aalsi insaan khud ka search Kar Lee!! 🤐 ", show_alert=True)
     elif "groupcb" in query.data:
         await query.answer()
 
@@ -383,7 +383,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False 
                 )
-                await query.answer('𝖢𝗁𝖾𝖼𝗄 𝗆𝗒 𝗉𝗆 🤠 , I have sent you 😉', show_alert=True)#if Pm Mode ON 
+                await query.answer('𝖢𝗁𝖾𝖼𝗄 𝗆𝗒 D𝗆 🤠 , I have sent you 😉', show_alert=True)#if Pm Mode ON 
         except UserIsBlocked:
             await query.answer('Unblock the bot mahn ! 🤬🤬 ', show_alert=True)
         except PeerIdInvalid:
@@ -429,7 +429,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             msg = await client.send_cached_media(
                 chat_id=AUTH_CHANNEL,
                 file_id=file_id,
-                caption=f'<b>Hi 👋 {query.from_user.mention} \n☵☵☵☵☵☵☵☵☵☵☵☵☵\n\n</b>\n 📁 ➜ [VBOTz] <code> {title}</code>\n\n⚠️ This file will be deleted from here within 5 minute as it has copyright ... !!!\n\nകോപ്പിറൈറ്റ് ഉള്ളതുകൊണ്ട് ഫയൽ 5 മിനിറ്റിനുള്ളിൽ ഇവിടെനിന്നും ഡിലീറ്റ് ആകുന്നതാണ് അതുകണ്ട് ഇവിടെ നിന്നും മറ്റെവിടെക്കെങ്കിലും മാറ്റിയതിന് ശേഷം ഡൗൺലോഡ് ചെയ്യുക!\n\n⚡Requested Group {query.message.chat.title}',#Custom Caption
+                caption=f'<b>Hi 👋 {query.from_user.mention} \n☵☵☵☵☵☵☵☵☵☵☵☵☵\n\n</b>\n 📁 ➜ [alexa] <code> {title}</code>\n\n⚠️ This file will be deleted from here within 5 minute as it has copyright ... !!!\n\n⚡Requested Group {query.message.chat.title}',#Custom Caption
                 protect_content=True if ident == "filep" else False 
             )
             msg1 = await query.message.reply(
@@ -444,7 +444,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                             InlineKeyboardButton('📥 𝖣𝗈𝗐𝗇𝗅𝗈𝖺𝖽 𝖫𝗂𝗇𝗄 📥', url = msg.link)
                         ],                       
                         [
-                            InlineKeyboardButton("⚠️𝖢𝖺𝗇'𝗍 𝖠𝖼𝖼𝖾𝗌𝗌 ❓ 𝖢𝗅𝗂𝖼𝗄 𝖧𝖾𝗋𝖾 ⚠️", url=f'https://t.me/+bWglNCCUOH5jYTQ1')#Add Your url where the file need to come
+                            InlineKeyboardButton("⚠️𝖢𝖺𝗇'𝗍 𝖠𝖼𝖼𝖾𝗌𝗌 ❓ 𝖢𝗅𝗂𝖼𝗄 𝖧𝖾𝗋𝖾 ⚠️", url=f'https://t.me/Updatesallmovies')#Add Your url where the file need to come
                         ]
                     ]
                 )
@@ -504,10 +504,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             'CAACAgIAAxkBAALfhWKhyQAB6dM3e7xjAzNaNkDcJvRusAAChxUAAj0PUEnem2b91sejvx4E',
             reply_markup=InlineKeyboardMarkup(
                 [[
-                    InlineKeyboardButton('📢 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ', url='https://t.me/CinemaVeedMovies')
+                    InlineKeyboardButton('📢 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ', url='https://t.me/Movies_Series_1159')
                 ],[
-                    InlineKeyboardButton('🤖 ʙᴏᴛ ᴜᴘᴅᴀᴛᴇs', url='https://t.me/vintagebotz'),
-                    InlineKeyboardButton('👥 ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ', url='https://t.me/Cinemaveed')
+                    InlineKeyboardButton('🤖 ʙᴏᴛ ᴜᴘᴅᴀᴛᴇs', url='https://t.me/Updatesallmovies'),
+                    InlineKeyboardButton('👥 ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ', url='https://t.me/Movies_Series_1159')
                 ],[
                     InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ʜᴇʀᴇ', switch_inline_query_current_chat='')
                 ],[
@@ -568,8 +568,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('⚙️ Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ ⚙️', callback_data='jns_maintains')
                 ],
                 [
-                    InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ', url=f'https://t.me/VintageBotz'),
-                    InlineKeyboardButton('🎭 ᴍᴏᴠɪᴇs', url=f'https://t.me/Cinemaveed')
+                    InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ', url=f'https://t.me/Updatesallmovies'),
+                    InlineKeyboardButton('🎭 ᴍᴏᴠɪᴇs', url=f'https://t.me/Movies_Series_1159')
                 ],
                 [
                     InlineKeyboardButton('⏮️ ʙᴀᴄᴋ', callback_data='start')
@@ -586,8 +586,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('💎 ʙᴏss', url=f'https://t.me/nishn_ea'),
-                        InlineKeyboardButton('📯 sᴜᴘᴘᴏʀᴛ', url=f'https://t.me/VBotzSupport')
+                        InlineKeyboardButton('💎 ʙᴏss', url=f'https://t.me/Updatesallmovies'),
+                        InlineKeyboardButton('📯 sᴜᴘᴘᴏʀᴛ', url=f'https://t.me/Updatesallmovies')
                     ],
                     [
                         InlineKeyboardButton('⏮️ ʙᴀᴄᴋ', callback_data='about_menu1'),
@@ -603,11 +603,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('🤴🏻 ᴏᴡɴᴇʀ', url=f'http://t.me/nishn_ea')
+                        InlineKeyboardButton('🤴🏻 ᴏᴡɴᴇʀ', url=f'https://t.me/Updatesallmovies')
                     ],
                     [
-                        InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url=f'https://t.me/VintageBotz'),
-                        InlineKeyboardButton('🤝🏻 sᴜᴘᴘᴏʀᴛ', url=f'https://t.me/VBotzSupport')
+                        InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url=f'https://t.me/Updatesallmovies'),
+                        InlineKeyboardButton('🤝🏻 sᴜᴘᴘᴏʀᴛ', url=f'https://t.me/Updatesallmovies')
                                              
                     ],
                     [
@@ -626,14 +626,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('🎀 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ', url='https://t.me/CinemaVeedMovies')
+                        InlineKeyboardButton('🎀 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ', url='https://t.me/Movies_Series_1159')
                     ],
                     [
-                        InlineKeyboardButton('🎭 ᴍᴏᴠɪᴇs', url='https://t.me/cinemaveed'),
-                        InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/VintageBotz')
+                        InlineKeyboardButton('🎭 ᴍᴏᴠɪᴇs', url='https://t.me/Movies_Series_1159'),
+                        InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/Updatesallmovies')
                     ],
                     [
-                        InlineKeyboardButton('🤝🏻 sᴜᴘᴘᴏʀᴛ', url='https://t.me/VBotzSupport')
+                        InlineKeyboardButton('🤝🏻 sᴜᴘᴘᴏʀᴛ', url='https://t.me/Updatesallmovies')
                     ],
                     [
                         InlineKeyboardButton('⏮️ ʙᴀᴄᴋ', callback_data='about_menu1'),
@@ -649,10 +649,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('💸 ᴠɪɴᴛᴀɢᴇ ʙᴏᴛᴢ', url=f'http://t.me/VintageBotz')
+                        InlineKeyboardButton('💸 unknown ʙᴏᴛᴢ', url=f'https://t.me/Updatesallmovies')
                     ],
                     [
-                        InlineKeyboardButton('🤝🏻 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url=f'https://t.me/VBotzSupport')
+                        InlineKeyboardButton('🤝🏻 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url=f'https://t.me/Updatesallmovies')
                     ],                    
                     [
                         InlineKeyboardButton('⏮️ ʙᴀᴄᴋ', callback_data='jns_maintains'),
@@ -1078,13 +1078,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "close":
         await query.message.delete()
     elif query.data == 'tips':
-        await query.answer("=> 𝖲𝖾𝗇𝖽 𝖼𝗈𝗋𝗋𝖾𝖼𝗍 𝖬𝗈𝗏𝗂𝖾/𝗌𝖾𝗋𝗂𝖾𝗌 𝖭𝖺𝗆𝖾\n=>𝖳𝗈 𝖦𝖾𝗍 𝖡𝖾𝗍𝗍𝖾𝗋 𝗋𝖾𝗌𝗎𝗅𝗍 𝖥𝗈𝗋 movies include year and language along with movie name \n\n=>Made By Techno Mindz", True)
+        await query.answer("=> 𝖲𝖾𝗇𝖽 𝖼𝗈𝗋𝗋𝖾𝖼𝗍 𝖬𝗈𝗏𝗂𝖾/𝗌𝖾𝗋𝗂𝖾𝗌 𝖭𝖺𝗆𝖾\n=>𝖳𝗈 𝖦𝖾𝗍 𝖡𝖾𝗍𝗍𝖾𝗋 𝗋𝖾𝗌𝗎𝗅𝗍 𝖥𝗈𝗋 movies include year and language along with movie name \n\n=>Made By unknown", True)
     elif query.data == 'moviesheading':
         await query.answer("=>This is your search results, if is there any changes in result kindly follow the tips ☺️ ", True)
     elif query.data == 'filenos':
         await query.answer("=>I have only this much files 😰 \n To get more results do request as per tips 👉🏻 ", True)
     elif query.data == 'inform':
-        await query.answer("⚠︎ Information ⚠︎\n\nAfter 5 minutes this message will be automatically deleted\n\nIf you do not see the requested movie / series file, look at the next page\n\nⒸ @TmMainChannel", True)
+        await query.answer("⚠︎ Information ⚠︎\n\nAfter 5 minutes this message will be automatically deleted\n\nIf you do not see the requested movie / series file, look at the next page\n\nⒸ @Updatesallmovies", True)
     try: await query.answer('⏳Loading...') 
     except: pass
 
@@ -1141,12 +1141,12 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
 
     btn.insert(0,
             [
-                InlineKeyboardButton("🎭 ᴍᴏᴠɪᴇs ᴄᴏʟʟᴇᴄᴛɪᴏɴ", url="https://t.me/CinemaVeedMovies"),
-                InlineKeyboardButton("💬 ᴍᴏᴠɪᴇ ʀᴇǫ", url="https://t.me/cinemaveed")
+                InlineKeyboardButton("🎭 ᴍᴏᴠɪᴇs ᴄᴏʟʟᴇᴄᴛɪᴏɴ", url="https://t.me/Movies_Series_1159"),
+                InlineKeyboardButton("💬 ᴍᴏᴠɪᴇ ʀᴇǫ", url="https://t.me/Movies_Series_1159")
             ])
 
     btn.insert(0, [
-        InlineKeyboardButton("📥 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 📥", url="https://t.me/tmmainchannel/29")
+        InlineKeyboardButton("📥 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 📥", url="https://t.me/Updatesallmovies")
     ])
 
     if offset != "":
@@ -1237,7 +1237,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        one_button = InlineKeyboardMarkup([[InlineKeyboardButton("𝗔𝗗𝗠𝗜𝗡 🔥", url="https://t.me/cv_admbot"), InlineKeyboardButton("🤕 𝗚𝗢𝗢𝗚𝗟𝗘 🤒", url="https://www.google.com/")]])
+        one_button = InlineKeyboardMarkup([[InlineKeyboardButton("𝗔𝗗𝗠𝗜𝗡 🔥", url="https://t.me/Moviestadka_request_bot"), InlineKeyboardButton("🤕 𝗚𝗢𝗢𝗚𝗟𝗘 🤒", url="https://www.google.com/")]])
         k = await msg.reply_video(video="https://telegra.ph/file/337330da804ce0aa30110.mp4", caption="ʜᴇʏ, sᴏʀʀʏ, ɴᴏ ᴍᴏᴠɪᴇ/sᴇʀɪᴇs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴡᴏʀᴅ ᴡᴀs ғᴏᴜɴᴅ 🥺\n\nᴘᴏssɪʙʟᴇ ᴄᴀᴜsᴇs : 🤔\n\n⭕️ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ ʏᴇᴛ\n⭕️ ɪɴᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ\n⭕ ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ᴏᴡɴᴇʀ\n\n👉Contact To Group Admin👇", reply_markup = one_button)
         await asyncio.sleep(15)
         await k.delete()
@@ -1268,7 +1268,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        one_button = InlineKeyboardMarkup([[InlineKeyboardButton("𝗔𝗗𝗠𝗜𝗡 🔥", url="https://t.me/cv_admbot"), InlineKeyboardButton("🤕 𝗚𝗢𝗢𝗚𝗟𝗘 🤒", url="https://www.google.com/")]])
+        one_button = InlineKeyboardMarkup([[InlineKeyboardButton("𝗔𝗗𝗠𝗜𝗡 🔥", url="https://t.me/Moviestadka_request_bot"), InlineKeyboardButton("🤕 𝗚𝗢𝗢𝗚𝗟𝗘 🤒", url="https://www.google.com/")]])
         k = await msg.reply_video(video="https://telegra.ph/file/337330da804ce0aa30110.mp4", caption="ʜᴇʏ, sᴏʀʀʏ, ɴᴏ ᴍᴏᴠɪᴇ/sᴇʀɪᴇs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴡᴏʀᴅ ᴡᴀs ғᴏᴜɴᴅ 🥺\n\nᴘᴏssɪʙʟᴇ ᴄᴀᴜsᴇs : 🤔\n\n⭕️ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ ʏᴇᴛ\n⭕️ ɪɴᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ\n⭕ ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ᴏᴡɴᴇʀ\n\n👉Contact To Group Admin👇", reply_markup = one_button)
         await asyncio.sleep(20)
         await k.delete()
@@ -1282,7 +1282,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    one_button = InlineKeyboardMarkup([[InlineKeyboardButton("𝗔𝗗𝗠𝗜𝗡 🔥", url="https://t.me/cv_admbot"), InlineKeyboardButton("🤕 𝗚𝗢𝗢𝗚𝗟𝗘 🤒", url="https://www.google.com/")]])
+    one_button = InlineKeyboardMarkup([[InlineKeyboardButton("𝗔𝗗𝗠𝗜𝗡 🔥", url="https://t.me/Moviestadka_request_bot"), InlineKeyboardButton("🤕 𝗚𝗢𝗢𝗚𝗟𝗘 🤒", url="https://www.google.com/")]])
     k = await msg.reply_video(video="https://telegra.ph/file/337330da804ce0aa30110.mp4", caption="ʜᴇʏ, sᴏʀʀʏ, ɴᴏ ᴍᴏᴠɪᴇ/sᴇʀɪᴇs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴡᴏʀᴅ ᴡᴀs ғᴏᴜɴᴅ 🥺\n\nᴘᴏssɪʙʟᴇ ᴄᴀᴜsᴇs : 🤔\n\n⭕️ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ ʏᴇᴛ\n⭕️ ɪɴᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ\n⭕ ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ᴏᴡɴᴇʀ\n\n👉Contact To Group Admin👇", reply_markup = one_button)
     await asyncio.sleep(20)
     await k.delete()
