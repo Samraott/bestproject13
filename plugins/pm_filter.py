@@ -1216,14 +1216,6 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
     
     await asyncio.sleep(DELETE_TIME)
     await fmsg.delete()
-    await client.send_video(
-                chat_id=message.chat.id,
-                video="https://telegra.ph/file/0cddf1c687a0dbc256313.mp4",
-                caption=f"📢 Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code>\nBʏ <spoiler>{message.from_user.mention}</spoiler>\nIs Now Cʟᴏꜱᴇᴅ 😀",
-                reply_to_message_id=message.message_id
-            )
-    await msg.delete()
-
     if spoll:
         await msg.message.delete()
 
