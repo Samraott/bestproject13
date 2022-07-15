@@ -148,7 +148,7 @@ async def advantage_spoll_choker(bot, query):
             await auto_filter(bot, query, k)
         else:
             one_button = InlineKeyboardMarkup([[InlineKeyboardButton("👼🏻 𝘼𝘿𝙈𝙄𝙉", url="https://t.me/Moviestadka_request_bot"), InlineKeyboardButton("🤕 𝙂𝙊𝙊𝙂𝙇𝙀 🤒", url="https://www.google.com/")]])
-            k = await msg.reply_photo(photo="https://telegra.ph/file/aa2ccd9f4fd452a827f80.jpg", caption="<b> Hey, sᴏʀʀʏ, ɴᴏ ᴍᴏᴠɪᴇs/sᴇʀɪᴇs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴡᴀs ғᴏᴜɴᴅ 🥲\n\n𝙿𝚘𝚜𝚜𝚒𝚋𝚕𝚎 𝙲𝚊𝚞𝚜𝚎𝚜 : 🤔\n\n★ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ ʏᴇᴛ\n★ ɪɴᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ\n★ ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ᴛʜᴇ ᴏᴡɴᴇʀ\n\n👉ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ👇 </b>", reply_markup = one_button)#Spell check reply
+            k = await msg.reply_video(video="https://telegra.ph/file/aa2ccd9f4fd452a827f80.jpg", caption="<b> Hey, sᴏʀʀʏ, ɴᴏ ᴍᴏᴠɪᴇs/sᴇʀɪᴇs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴡᴀs ғᴏᴜɴᴅ 🥲\n\n𝙿𝚘𝚜𝚜𝚒𝚋𝚕𝚎 𝙲𝚊𝚞𝚜𝚎𝚜 : 🤔\n\n★ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ ʏᴇᴛ\n★ ɪɴᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ\n★ ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ᴛʜᴇ ᴏᴡɴᴇʀ\n\n👉ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ👇 </b>", reply_markup = one_button)#Spell check reply
             await asyncio.sleep(20)
             await k.delete()
             await msg.delete()
@@ -1230,7 +1230,7 @@ async def advantage_spell_chok(msg):
     gs_parsed = []
     if not g_s:
         one_button = InlineKeyboardMarkup([[InlineKeyboardButton("𝗔𝗗𝗠𝗜𝗡 🔥", url="https://t.me/Moviestadka_request_bot"), InlineKeyboardButton("🤕 𝗚𝗢𝗢𝗚𝗟𝗘 🤒", url="https://www.google.com/")]])
-        k = await msg.reply_photo(photo="https://telegra.ph/file/aa2ccd9f4fd452a827f80.jpg", caption="<b> ʜᴇʏ, sᴏʀʀʏ, ɴᴏ ᴍᴏᴠɪᴇ/sᴇʀɪᴇs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴡᴏʀᴅ ᴡᴀs ғᴏᴜɴᴅ 🥲\n\nᴘᴏssɪʙʟᴇ ᴄᴀᴜsᴇs : 🤔\n\n★ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ ʏᴇᴛ\n★ ɪɴᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ\n★ ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ᴏᴡɴᴇʀ\n\n👉Contact To Group Admin👇 </b>", reply_markup = one_button)
+        k = await msg.reply_video(video="https://telegra.ph/file/aa2ccd9f4fd452a827f80.jpg", caption="<b> ʜᴇʏ, sᴏʀʀʏ, ɴᴏ ᴍᴏᴠɪᴇ/sᴇʀɪᴇs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴡᴏʀᴅ ᴡᴀs ғᴏᴜɴᴅ 🥲\n\nᴘᴏssɪʙʟᴇ ᴄᴀᴜsᴇs : 🤔\n\n★ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ ʏᴇᴛ\n★ ɪɴᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ\n★ ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ᴏᴡɴᴇʀ\n\n👉Contact To Group Admin👇 </b>", reply_markup = one_button)
         await asyncio.sleep(15)
         await k.delete()
         await msg.delete()
@@ -1261,7 +1261,7 @@ async def advantage_spell_chok(msg):
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
         one_button = InlineKeyboardMarkup([[InlineKeyboardButton("𝗔𝗗𝗠𝗜𝗡 🔥", url="https://t.me/Moviestadka_request_bot"), InlineKeyboardButton("🤕 𝗚𝗢𝗢𝗚𝗟𝗘 🤒", url="https://www.google.com/")]])
-        k = await msg.reply_photo(photo="https://telegra.ph/file/aa2ccd9f4fd452a827f80.jpg", caption="<b> ʜᴇʏ, sᴏʀʀʏ, ɴᴏ ᴍᴏᴠɪᴇ/sᴇʀɪᴇs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴡᴏʀᴅ ᴡᴀs ғᴏᴜɴᴅ 🥲\n\nᴘᴏssɪʙʟᴇ ᴄᴀᴜsᴇs : 🤔\n\n★ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ ʏᴇᴛ\n★ ɪɴᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ\n★ ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ᴏᴡɴᴇʀ\n\n👉Contact To Group Admin👇 </b>", reply_markup = one_button)
+        k = await msg.reply_video(video="https://telegra.ph/file/aa2ccd9f4fd452a827f80.jpg", caption="<b> ʜᴇʏ, sᴏʀʀʏ, ɴᴏ ᴍᴏᴠɪᴇ/sᴇʀɪᴇs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴡᴏʀᴅ ᴡᴀs ғᴏᴜɴᴅ 🥲\n\nᴘᴏssɪʙʟᴇ ᴄᴀᴜsᴇs : 🤔\n\n★ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ ʏᴇᴛ\n★ ɪɴᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ\n★ ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ᴏᴡɴᴇʀ\n\n👉Contact To Group Admin👇 </b>", reply_markup = one_button)
         await asyncio.sleep(20)
         await k.delete()
         await msg.delete()
@@ -1275,7 +1275,7 @@ async def advantage_spell_chok(msg):
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
     one_button = InlineKeyboardMarkup([[InlineKeyboardButton("𝗔𝗗𝗠𝗜𝗡 🔥", url="https://t.me/Moviestadka_request_bot"), InlineKeyboardButton("🤕 𝗚𝗢𝗢𝗚𝗟𝗘 🤒", url="https://www.google.com/")]])
-    k = await msg.reply_photo(photo="https://telegra.ph/file/aa2ccd9f4fd452a827f80.jpg", caption="<b> ʜᴇʏ, sᴏʀʀʏ, ɴᴏ ᴍᴏᴠɪᴇ/sᴇʀɪᴇs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴡᴏʀᴅ ᴡᴀs ғᴏᴜɴᴅ 🥲\n\nᴘᴏssɪʙʟᴇ ᴄᴀᴜsᴇs : 🤔\n\n★ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ ʏᴇᴛ\n★ ɪɴᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ\n★ ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ᴏᴡɴᴇʀ\n\n👉Contact To Group Admin👇 </b>", reply_markup = one_button)
+    k = await msg.reply_video(video="https://telegra.ph/file/aa2ccd9f4fd452a827f80.jpg", caption="<b> ʜᴇʏ, sᴏʀʀʏ, ɴᴏ ᴍᴏᴠɪᴇ/sᴇʀɪᴇs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴡᴏʀᴅ ᴡᴀs ғᴏᴜɴᴅ 🥲\n\nᴘᴏssɪʙʟᴇ ᴄᴀᴜsᴇs : 🤔\n\n★ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ ʏᴇᴛ\n★ ɪɴᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ\n★ ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ᴏᴡɴᴇʀ\n\n👉Contact To Group Admin👇 </b>", reply_markup = one_button)
     await asyncio.sleep(20)
     await k.delete()
     await msg.delete()
