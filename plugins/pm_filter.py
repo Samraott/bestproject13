@@ -1,4 +1,4 @@
-# Kanged From @TechnoMindz and @RaviTechnoMindz
+# Kanged From @nishn_ea
 import asyncio
 import re
 import ast
@@ -66,7 +66,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"🦋 [{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}#{query.from_user.id}'
+                    text=f"📂 [{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}#{query.from_user.id}'
                 )
             ] 
             for file in files
@@ -78,7 +78,7 @@ async def next_page(bot, query):
                     text=f"{file.file_name}", callback_data=f'{pre}#{file.file_id}#{query.from_user.id}'
                 ),
                 InlineKeyboardButton(
-                    text=f"🦋[{get_size(file.file_size)}]",
+                    text=f"📂[{get_size(file.file_size)}]",
                     callback_data=f'{pre}_#{file.file_id}#{query.from_user.id}',
                 )
             ] 
@@ -87,12 +87,12 @@ async def next_page(bot, query):
 
     btn.insert(0,
             [
-                InlineKeyboardButton("𓂀𝕄𝕆𝕍𝕀𝔼𝕊𓂀", url="https://t.me/technomoviesCollection"),
-                InlineKeyboardButton("彡ᴄʜᴀɴɴᴇʟ彡", url="https://t.me/TMmainchannel")
+                InlineKeyboardButton("🎭 ᴍᴏᴠɪᴇs", url="https://t.me/CinemaVeed"),
+                InlineKeyboardButton("📢 ᴄʜᴀɴɴᴇʟ", url="https://t.me/CinemaVeedMovies")
             ])
 
     btn.insert(0, [
-        InlineKeyboardButton("🤖𓂀ℍ𝕆𝕎 𝕋𝕆 𝔻𝕆𝕎ℕ𝕃𝕆𝔸𝔻𓂀🤖", url="https://t.me/tmmainchannel/4")#Techno Mindz
+        InlineKeyboardButton("📥 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 📥", url="https://t.me/tmmainchannel/4")#Vintage Botz
     ])
 
     if 0 < offset <= 10:
@@ -103,20 +103,20 @@ async def next_page(bot, query):
         off_set = offset - 10
     if n_offset == 0:
         btn.append(
-            [InlineKeyboardButton("⏪ 𝓑𝓐𝓒𝓚", callback_data=f"next_{req}_{key}_{off_set}"),
-             InlineKeyboardButton(f"📃 𝓟𝓐𝓖𝓔𝓢 {round(int(offset) / 10) + 1} / {round(total / 10)}",
+            [InlineKeyboardButton("⏪ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
+             InlineKeyboardButton(f"📃 ᴘᴀɢᴇs {round(int(offset) / 10) + 1} / {round(total / 10)}",
                                   callback_data="pages")]
         )
     elif off_set is None:
         btn.append(
             [InlineKeyboardButton(f"🗓 {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
-             InlineKeyboardButton("𝓝𝓔𝓧𝓣 ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])#Techno Mindz
+             InlineKeyboardButton("ɴᴇxᴛ ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])#Techno Mindz
     else:
         btn.append(
             [
-                InlineKeyboardButton("⏪ 𝓑𝓐𝓒𝓚", callback_data=f"next_{req}_{key}_{off_set}"),
+                InlineKeyboardButton("⏪ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
                 InlineKeyboardButton(f"🗓 {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
-                InlineKeyboardButton("𝓝𝓔𝓧𝓣 ⏩", callback_data=f"next_{req}_{key}_{n_offset}")
+                InlineKeyboardButton("ɴᴇxᴛ ⏩", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
     try:
@@ -209,7 +209,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 except:
                     pass
             else:
-                await query.answer("That's not for you!! 🤐 \n\n@TmMainChannel", show_alert=True)
+                await query.answer("That's not for you!! 🤐 ", show_alert=True)
     elif "groupcb" in query.data:
         await query.answer()
 
@@ -229,8 +229,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         keyboard = InlineKeyboardMarkup([
             [InlineKeyboardButton(f"{stat}", callback_data=f"{cb}:{group_id}"),
-             InlineKeyboardButton("DELETE", callback_data=f"deletecb:{group_id}")],
-            [InlineKeyboardButton("ミ★𝘉𝘈𝘊𝘒★彡", callback_data="backcb")]
+             InlineKeyboardButton("🗑️ ᴅᴇʟᴇᴛᴇ", callback_data=f"deletecb:{group_id}")],
+            [InlineKeyboardButton("⏮️ ʙᴀᴄᴋ", callback_data="backcb")]
         ])
 
         await query.message.edit_text(
@@ -429,7 +429,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             msg = await client.send_cached_media(
                 chat_id=AUTH_CHANNEL,
                 file_id=file_id,
-                caption=f'<b>Hi 👋 {query.from_user.mention} \n☵☵☵☵☵☵☵☵☵☵☵☵☵\n\n</b>\n 📁 ➜ [@TmMainChannel] <code> {title}</code>\n\n☄️⚡️𝗔𝗟𝗟 𝗠𝗢𝗩𝗜𝗘𝗦 𝗛𝗘𝗥𝗘⚡️☄️\n\n𝙍𝙚𝙦𝙪𝙚𝙨𝙩 𝙔𝙤𝙪𝙧 𝙈𝙤𝙫𝙞𝙚𝙨 𝙃𝙚𝙧𝙚 𝙖𝙣𝙙 𝙂𝙚𝙩 𝙄𝙣 1 𝙈𝙞𝙣𝙪𝙩𝙚 100℅👇\n@TechnoMoviesCollection\n\n𝕊𝕌𝔹𝕊ℂℝ𝕀𝔹𝔼 𝕆𝕌ℝ 𝕐𝕆𝕌𝕋𝕌𝔹𝔼 ℂℍ𝔸ℕℕ𝔼𝕃 🥰 👇\nhttps://www.youtube.com/c/TechnoMindz\n\n🔗 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞 ☞@TmMainChannel\n\n⚠️ This file will be deleted in 5 minute as it has copyright ... !!!\n\n Download only After moving from here to saved message or somewhere else..!!!\n\n╔═══ 𝐉𝐨𝐢𝐧 𝐖𝐢𝐭𝐡 𝐔𝐬 ═══╗\n\n<a href="https://t.me/tmmainchannel">1☞𝙅𝙤𝙞𝙣 𝙊𝙛𝙛𝙞𝙘𝙞𝙖𝙡 𝘾𝙝𝙖𝙣𝙣𝙚𝙡</a>\n\n<a href="https://t.me/technomoviescollection">2☞ 𝙅𝙤𝙞𝙣 𝙈𝙤𝙫𝙞𝙚𝙨 𝙂𝙧𝙤𝙪𝙥</a>\n\n<a href="https://t.me/technomindzchat">3☞ 𝙅𝙤𝙞𝙣 𝘾𝙝𝙖𝙩𝙩𝙞𝙣𝙜 𝙂𝙧𝙤𝙪𝙥</a>\n\n╚═══ 𝐉𝐨𝐢𝐧 𝐖𝐢𝐭𝐡 𝐔𝐬 ═══╝\n<i><b>🤩Requested Group {query.message.chat.title}</b></i>\n\n<b>♥️ 𝗧𝗲𝗮𝗺 ➜ @TmMainChannel</b>\n\n✯ ━━━━━ ✧ ━━━━━ ✯',#Custom Caption
+                caption=f'<b>Hi 👋 {query.from_user.mention} \n☵☵☵☵☵☵☵☵☵☵☵☵☵\n\n</b>\n 📁 ➜ [VBOTz] <code> {title}</code>\n\n⚠️ This file will be deleted from here within 5 minute as it has copyright ... !!!\n\nകോപ്പിറൈറ്റ് ഉള്ളതുകൊണ്ട് ഫയൽ 5 മിനിറ്റിനുള്ളിൽ ഇവിടെനിന്നും ഡിലീറ്റ് ആകുന്നതാണ് അതുകൊണ്ട് ഇവിടെ നിന്നും മറ്റെവിടെക്കെങ്കിലും മാറ്റിയതിന് ശേഷം ഡൗൺലോഡ് ചെയ്യുക!\n\n⚡Requested Group {query.message.chat.titl',#Custom Caption
                 protect_content=True if ident == "filep" else False 
             )
             msg1 = await query.message.reply(
