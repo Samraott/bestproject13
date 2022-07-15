@@ -23,7 +23,7 @@ async def index_files(bot, query):
     if raju == 'reject':
         await query.message.delete()
         await bot.send_message(int(from_user),
-                               f'Your Submission for indexing {chat} has been decliened by our moderators.\nContact Support @TechnoMindzChat',
+                               f'Your Submission for indexing {chat} has been decliened by our moderators.\nContact Support @Movies_Series_1159',
                                reply_to_message_id=int(lst_msg_id))
         return
 
@@ -68,7 +68,7 @@ async def send_for_index(bot, message):
     try:
         await bot.get_chat(chat_id)
     except ChannelInvalid:
-        return await message.reply('This may be a private channel / group😔. Make me an admin over there to index the files.😀\nNeed Files Contact TechnoMindz Support\n@TechnoMindzChat')
+        return await message.reply('This may be a private channel / group😔. Make me an admin over there to index the files.😀\nNeed Files Contact Support\n@Movies_Series_1159')
     except (UsernameInvalid, UsernameNotModified):
         return await message.reply('Invalid Link specified.')
     except Exception as e:
@@ -117,7 +117,7 @@ async def send_for_index(bot, message):
     await bot.send_message(LOG_CHANNEL,
                            f'#IndexRequest\n\nBy : {message.from_user.mention} (<code>{message.from_user.id}</code>)\nChat ID/ Username - <code> {chat_id}</code>\nLast Message ID - <code>{last_msg_id}</code>\nInviteLink - {link}',
                            reply_markup=reply_markup)
-    await message.reply('ThankYou For the Contribution😀, Wait For My Moderators to verify✅ the files.\nMade By @TechnoMindzChat')
+    await message.reply('ThankYou For the Contribution😀, Wait For My Moderators to verify✅ the files.\nMade By @Movies_Series_1159')
 
 
 @Client.on_message(filters.command('setskip') & filters.user(ADMINS))
