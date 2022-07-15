@@ -40,10 +40,10 @@ async def gen_link_s(bot, message):
 @Client.on_message(filters.command(['batch', 'pbatch']) & filters.create(allowed))
 async def gen_link_batch(bot, message):
     if " " not in message.text:
-        return await message.reply("Use correct format.\nExample <code>/batch https://t.me/Tmmainchannel/10 https://t.me/TmMainChannel/20</code>.\n\n@TmMainChannel")
+        return await message.reply("Use correct format.\nExample <code>/batch https://t.me/Movies_Series_1159/10 https://t.me/Movies_Series_1159/20</code>.\n\n @Movies_Series_1159")
     links = message.text.strip().split(" ")
     if len(links) != 3:
-        return await message.reply("Use correct format.\nExample <code>/batch https://t.me/TmMainChannel/10 https://t.me/TmMainChannel/20</code>.\n\n@TmMainChannel")
+        return await message.reply("Use correct format.\nExample <code>/batch https://t.me/Movies_Series_1159/10 https://t.me/Movies_Series_1159/20</code>.\n\n@Movies_Series_1159")
     cmd, first, last = links
     regex = re.compile("(https://)?(t\.me/|telegram\.me/|telegram\.dog/)(c/)?(\d+|[a-zA-Z_0-9]+)/(\d+)$")
     match = regex.match(first)
