@@ -28,10 +28,10 @@ async def start(client, message: pyrogram.types.Message):
             'CAACAgUAAxkBAAEBHLhilcHI9LGFiorY11Cb41HiOT8XxgACbAYAAr4GsFT_LGNUHw4NliQE',
             reply_markup=InlineKeyboardMarkup(
                 [[
-                    InlineKeyboardButton('★彡[ᴜᴘᴅᴀᴛᴇꜱ]彡★', url='https://t.me/Tmmainchannel')
+                    InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇꜱ', url='https://t.me/VintageBotz')
                 ],
                 [
-                    InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                    InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', url=f"https://t.me/{temp.U_NAME}?start=help"),
                 ]]
             )
         )
@@ -53,18 +53,18 @@ async def start(client, message: pyrogram.types.Message):
             'CAACAgIAAxkBAALfhWKhyQAB6dM3e7xjAzNaNkDcJvRusAAChxUAAj0PUEnem2b91sejvx4E',
             reply_markup=InlineKeyboardMarkup(
                 [[
-                    InlineKeyboardButton('𓂀 𝕄𝔸𝕀ℕ ℂℍ𝔸ℕℕ𝔼𝕃 𓂀', url='https://t.me/Tmmainchannel')
+                    InlineKeyboardButton('🧨 ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/CinemaVeedMovies')
                 ],
                 [
-                    InlineKeyboardButton('🔍 𝒮𝐸𝒜𝑅𝒞𝐻', switch_inline_query_current_chat=''),
-                    InlineKeyboardButton('🤖 𝙂𝙍𝙊𝙐𝙋', url='https://t.me/technomoviescollection')
+                    InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ʜᴇʀᴇ', switch_inline_query_current_chat=''),
+                    InlineKeyboardButton('👥 ɢʀᴏᴜᴘ', url='https://t.me/cinemaveed')
                 ],
                 [
-                    InlineKeyboardButton('ℍ𝔼𝕃ℙ', callback_data='help'),
-                    InlineKeyboardButton('𝔸𝔹𝕆𝕌𝕋', callback_data='about')
+                    InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
+                    InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
                 ],
                 [
-                    InlineKeyboardButton('❌𝐂𝐋𝐎𝐒𝐄❌', callback_data='close')
+                    InlineKeyboardButton('❌ ᴄʟᴏsᴇ', callback_data='close')
                 ]]
             )
         )
@@ -103,18 +103,20 @@ async def start(client, message: pyrogram.types.Message):
             'CAACAgIAAxkBAALfhWKhyQAB6dM3e7xjAzNaNkDcJvRusAAChxUAAj0PUEnem2b91sejvx4E',
             reply_markup=InlineKeyboardMarkup(
                 [[
-                    InlineKeyboardButton('𓂀 𝕄𝔸𝕀ℕ ℂℍ𝔸ℕℕ𝔼𝕃 𓂀', url='https://t.me/Tmmainchannel')
+                    InlineKeyboardButton('🧨 ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ', url='https://t.me/CinemaVeedMovies')
                 ],
                 [
-                    InlineKeyboardButton('🔍 𝒮𝐸𝒜𝑅𝒞𝐻', switch_inline_query_current_chat=''),
-                    InlineKeyboardButton('🤖 𝙂𝙍𝙊𝙐𝙋', url='https://t.me/technomoviescollection')
+                    InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ʜᴇʀᴇ', switch_inline_query_current_chat=''),
+                    InlineKeyboardButton('👥 ɢʀᴏᴜᴘ', url='https://t.me/cinemaveed')
+                                         
+                                         
                 ],
                 [
-                    InlineKeyboardButton('ℍ𝔼𝕃ℙ', callback_data='help'),
-                    InlineKeyboardButton('𝔸𝔹𝕆𝕌𝕋', callback_data='about')
+                    InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
+                    InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
                 ],
                 [
-                    InlineKeyboardButton('❌𝐂𝐋𝐎𝐒𝐄❌', callback_data='close')
+                    InlineKeyboardButton('❌ ᴄʟᴏsᴇ', callback_data='close')
                 ]]
             )
         )
@@ -265,14 +267,15 @@ async def start(client, message: pyrogram.types.Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('⭕☞𝙈𝘼𝙄𝙉 𝘾𝙃𝘼𝙉𝙉𝙀𝙇⭕', url="https://t.me/tmmainchannel")
+                    InlineKeyboardButton('⭕ ᴍᴏᴠɪᴇ ᴄᴏʟʟᴇᴄᴛɪᴏɴ', url="https://t.me/CinemaVeedMovies")
+                                         
                 ],
                 [
-                    InlineKeyboardButton('⭕☞𝙈𝙊𝙑𝙄𝙀𝙎⭕', url="https://t.me/technomoviescollection"),
-                    InlineKeyboardButton('⭕☞𝘾𝙃𝘼𝙏𝙏𝙄𝙉𝙂⭕', url="https://t.me/Technomindzchat")
+                    InlineKeyboardButton('⭕ ʀᴇǫ ᴍᴏᴠɪᴇ', url="https://t.me/cinemaveed"),
+                    InlineKeyboardButton('⭕ ʙᴏᴛ ᴜᴘᴅᴀᴛᴇs', url="https://t.me/VintageBotz")
                 ],
                 [
-                    InlineKeyboardButton('⭕☞𝐘𝐎𝐔𝐓𝐔𝐁𝐄⭕', url="https://www.youtube.com/c/TechnoMindz")
+                    InlineKeyboardButton('⭕ ʙᴏᴛ sᴜᴘᴘᴏʀᴛ', url="https://t.me/VBotzSupport")
                 ]
             ]
         )
