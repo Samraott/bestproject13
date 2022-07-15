@@ -147,8 +147,8 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            one_button = InlineKeyboardMarkup([[InlineKeyboardButton("🥲 𝗢𝗪𝗡𝗘𝗥 🔥", url="https://t.me/TechnoKillerBot"), InlineKeyboardButton("🤕 𝗚𝗢𝗢𝗚𝗟𝗘 🤒", url="https://www.google.com/")]])
-            k = await msg.reply_video(video="https://telegra.ph//file/d90256b1575c7aaadccc5.mp4", caption="Hey, 𝐒𝐨𝐫𝐫𝐲, 𝐍𝐨 𝐌𝐨𝐯𝐢𝐞/𝐒𝐞𝐫𝐢𝐞𝐬 𝐑𝐞𝐥𝐚𝐭𝐞𝐝 𝐓𝐨 𝐓𝐡𝐞 𝐆𝐢𝐯𝐞𝐧 𝐖𝐨𝐫𝐝 𝐖𝐚𝐬 𝐅𝐨𝐮𝐧𝐝 🥺\n\n𝙿𝚘𝚜𝚜𝚒𝚋𝚕𝚎 𝙲𝚊𝚞𝚜𝚎𝚜 : 🤔\n\n⭕️ 𝐍𝐨𝐭 𝐑𝐞𝐥𝐞𝐚𝐬𝐞𝐝 𝐘𝐞𝐭\n⭕️ 𝐈𝐧𝐜𝐨𝐫𝐫𝐞𝐜𝐭 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠\n⭕ 𝐍𝐨𝐭 𝐔𝐩𝐥𝐨𝐚𝐝𝐞𝐝 𝐁𝐲 𝐎𝐰𝐧𝐞𝐫\n\n👉Contact To My Owner👇", reply_markup = one_button)#Spell check reply
+            one_button = InlineKeyboardMarkup([[InlineKeyboardButton("👼🏻 𝘼𝘿𝙈𝙄𝙉", url="https://t.me/CV_admbot"), InlineKeyboardButton("🤕 𝙂𝙊𝙊𝙂𝙇𝙀 🤒", url="https://www.google.com/")]])
+            k = await msg.reply_video(video="https://telegra.ph//file/d90256b1575c7aaadccc5.mp4", caption="Hey, sᴏʀʀʏ, ɴᴏ ᴍᴏᴠɪᴇs/sᴇʀɪᴇs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴡᴀs ғᴏᴜɴᴅ 🥺\n\n𝙿𝚘𝚜𝚜𝚒𝚋𝚕𝚎 𝙲𝚊𝚞𝚜𝚎𝚜 : 🤔\n\n⭕️ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ ʏᴇᴛ\n⭕️ ɪɴᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ\n⭕ ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ᴛʜᴇ ᴏᴡɴᴇʀ\n\n👉ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ👇", reply_markup = one_button)#Spell check reply
             await asyncio.sleep(20)
             await k.delete()
             await msg.delete()
@@ -449,7 +449,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     ]
                 )
             )
-            await query.answer('𓂀 ℂℍ𝔼ℂ𝕂 𝕀ℕ 𝕋ℍ𝔼 ℂℍ𝔸𝕋 𓂀',)
+            await query.answer('ᴄʜᴇᴄᴋ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ🕵🏻‍♂️',)
             await asyncio.sleep(300)
             await msg1.delete()
             await msg.delete()
@@ -504,17 +504,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             'CAACAgIAAxkBAALfhWKhyQAB6dM3e7xjAzNaNkDcJvRusAAChxUAAj0PUEnem2b91sejvx4E',
             reply_markup=InlineKeyboardMarkup(
                 [[
-                    InlineKeyboardButton('🎀𝑀𝒜𝐼𝒩 𝒞𝐻𝒜𝒩𝒩𝐸𝐿🎀', url='https://t.me/Tmmainchannel')
+                    InlineKeyboardButton('📢 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ', url='https://t.me/CinemaVeedMovies')
                 ],[
-                    InlineKeyboardButton('𓂀 𝕐𝕆𝕌𝕋𝕌𝔹𝔼 𓂀', url='https://www.youtube.com/c/TechnoMindz'),
-                    InlineKeyboardButton('📢 𝓒𝓗𝓐𝓣𝓣𝓘𝓝𝓖', url='https://t.me/Technomindzchat')
+                    InlineKeyboardButton('🤖 ʙᴏᴛ ᴜᴘᴅᴀᴛᴇs', url='https://t.me/vintagebotz'),
+                    InlineKeyboardButton('👥 ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ', url='https://t.me/Cinemaveed')
                 ],[
-                    InlineKeyboardButton('🔍 𝒮𝐸𝒜𝑅𝒞𝐻', switch_inline_query_current_chat='')
+                    InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ʜᴇʀᴇ', switch_inline_query_current_chat='')
                 ],[
-                    InlineKeyboardButton('𝐻𝐸𝐿𝒫', callback_data='help'),
-                    InlineKeyboardButton('😊 𝓐𝓑𝓞𝓤𝓣', callback_data='about')
+                    InlineKeyboardButton('💸 ʜᴇʟᴘ', callback_data='help'),
+                    InlineKeyboardButton('📝 ᴀʙᴏᴜᴛ', callback_data='about')
                 ],[
-                    InlineKeyboardButton('❌𝐂𝐋𝐎𝐒𝐄❌', callback_data='close')
+                    InlineKeyboardButton('❌ ᴄʟᴏsᴇ', callback_data='close')
                 ]]
             )
         )
@@ -527,12 +527,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             'CAACAgIAAxkBAALfAAFioLs6ludC4125M0m5V9LqfQY6jQAC_RkAAmzaUUlkoYIx4TqiCh4E',
             reply_markup=InlineKeyboardMarkup(
                 [[
-            InlineKeyboardButton('ғᴇᴀᴛᴜᴇs✨', callback_data='featuresS'),
-            InlineKeyboardButton('ᴛᴏᴏʟs🛠', callback_data='toolsjns')
+            InlineKeyboardButton('⚡ ғᴇᴀᴛᴜᴇs', callback_data='featuresS'),
+            InlineKeyboardButton('🛠️ ᴛᴏᴏʟs', callback_data='toolsjns')
             ],[     
-            InlineKeyboardButton('ミ★𝘉𝘈𝘊𝘒★彡', callback_data='start'),
-            InlineKeyboardButton('ʜᴏᴍᴇ🏕', callback_data='start'),
-            InlineKeyboardButton('❌𝐂𝐋𝐎𝐒𝐄❌', callback_data='close_data')
+            InlineKeyboardButton('⏮️ ʙᴀᴄᴋ', callback_data='start'),
+            InlineKeyboardButton('🏕️ ʜᴏᴍᴇ', callback_data='start'),
+            InlineKeyboardButton('❌ ᴄʟᴏsᴇ', callback_data='close_data')
             ]]
             )
         )
@@ -545,11 +545,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('👉𝐎𝐏𝐄𝐍👈', callback_data='about_menu1')
+                        InlineKeyboardButton('👉ᴏᴘᴇɴ👈', callback_data='about_menu1')
                     ],
                     [
-                        InlineKeyboardButton('ミ★𝘉𝘈𝘊𝘒★彡', callback_data='start'),
-                        InlineKeyboardButton('❌𝐂𝐋𝐎𝐒𝐄❌', callback_data='close')
+                        InlineKeyboardButton('⏮️ ʙᴀᴄᴋ', callback_data='start'),
+                        InlineKeyboardButton('❌ ᴄʟᴏsᴇ', callback_data='close')
                     ]
                 ]
             )
@@ -568,11 +568,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('⚙️ Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ ⚙️', callback_data='jns_maintains')
                 ],
                 [
-                    InlineKeyboardButton('❤️‍🔥ᴛᴇᴄʜɴᴏ ᴍɪɴᴅᴢ❤️‍🔥', url=f'https://t.me/TmMainChannel'),
-                    InlineKeyboardButton('💾ᴍᴏᴠɪᴇs💾', url=f'https://t.me/Technomoviescollection')
+                    InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ', url=f'https://t.me/VintageBotz'),
+                    InlineKeyboardButton('🎭 ᴍᴏᴠɪᴇs', url=f'https://t.me/Cinemaveed')
                 ],
                 [
-                    InlineKeyboardButton('ミ★𝘉𝘈𝘊𝘒★彡', callback_data='start')
+                    InlineKeyboardButton('⏮️ ʙᴀᴄᴋ', callback_data='start')
                 ]
                 ]
             )
@@ -586,12 +586,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('🎈𝐁𝐎𝐒𝐒🎈', url=f'https://t.me/technomindzyt'),
-                        InlineKeyboardButton('📯𝐒𝐔𝐏𝐏𝐎𝐑𝐓📯', url=f'https://t.me/technomindzchat')
+                        InlineKeyboardButton('💎 ʙᴏss', url=f'https://t.me/nishn_ea'),
+                        InlineKeyboardButton('📯 sᴜᴘᴘᴏʀᴛ', url=f'https://t.me/VBotzSupport')
                     ],
                     [
-                        InlineKeyboardButton('ミ★𝘉𝘈𝘊𝘒★彡', callback_data='about_menu1'),
-                        InlineKeyboardButton('❌𝐂𝐋𝐎𝐒𝐄❌', callback_data='close')
+                        InlineKeyboardButton('⏮️ ʙᴀᴄᴋ', callback_data='about_menu1'),
+                        InlineKeyboardButton('❌ ᴄʟᴏsᴇ', callback_data='close')
                     ]
                 ]
             )
@@ -603,15 +603,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('𓂀 𝕆𝕎ℕ𝔼ℝ 𓂀', url=f'http://t.me/TECHNOMINDZYT')
+                        InlineKeyboardButton('🤴🏻 ᴏᴡɴᴇʀ', url=f'http://t.me/nishn_ea')
                     ],
                     [
-                        InlineKeyboardButton('🤠DEVS🤠', url=f'https://t.me/TECHNOMINDZCHAT'),
-                        InlineKeyboardButton('🤠ᴛᴇᴄʜɴᴏ ᴍɪɴᴅᴢ🤠', url=f'https://t.me/Tmmainchannel')
+                        InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url=f'https://t.me/VintageBotz'),
+                        InlineKeyboardButton('🤝🏻 sᴜᴘᴘᴏʀᴛ', url=f'https://t.me/VBotzSupport')
+                                             
                     ],
                     [
-                        InlineKeyboardButton('ミ★𝘉𝘈𝘊𝘒★彡', callback_data='about_menu1'),
-                        InlineKeyboardButton('❌𝐂𝐋𝐎𝐒𝐄❌', callback_data='close')
+                        InlineKeyboardButton('⏮️ ʙᴀᴄᴋ', callback_data='about_menu1'),
+                        InlineKeyboardButton('❌ ᴄʟᴏsᴇ', callback_data='close')
                     ]
                 ]
             )
@@ -625,18 +626,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('🎀𝑀𝒜𝐼𝒩 𝒞𝐻𝒜𝒩𝒩𝐸𝐿🎀', url='https://t.me/Tmmainchannel')
+                        InlineKeyboardButton('🎀 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ', url='https://t.me/CinemaVeedMovies')
                     ],
                     [
-                        InlineKeyboardButton('𓂀𝕄𝕆𝕍𝕀𝔼𝕊𓂀', url='https://t.me/technomoviescollection'),
-                        InlineKeyboardButton('📢𝓒𝓗𝓐𝓣𝓣𝓘𝓝𝓖', url='https://t.me/Technomindzchat')
+                        InlineKeyboardButton('🎭 ᴍᴏᴠɪᴇs', url='https://t.me/cinemaveed'),
+                        InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/VintageBotz')
                     ],
                     [
-                        InlineKeyboardButton('𓂀 𝕐𝕆𝕌𝕋𝕌𝔹𝔼 𓂀', url='https://www.youtube.com/c/TechnoMindz')
+                        InlineKeyboardButton('🤝🏻 sᴜᴘᴘᴏʀᴛ', url='https://t.me/VBotzSupport')
                     ],
                     [
-                        InlineKeyboardButton('ミ★𝘉𝘈𝘊𝘒★彡', callback_data='about_menu1'),
-                        InlineKeyboardButton('❌𝐂𝐋𝐎𝐒𝐄❌', callback_data='close')
+                        InlineKeyboardButton('⏮️ ʙᴀᴄᴋ', callback_data='about_menu1'),
+                        InlineKeyboardButton('❌ ᴄʟᴏsᴇ', callback_data='close')
                     ]
                 ]
             )
