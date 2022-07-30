@@ -209,7 +209,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 except:
                     pass
             else:
-                await query.answer("Abee Aalsi insaan khud ka search Kar Lee!! 🤐 ", show_alert=True)
+                await query.answer("are yrr khud ka Search karo!! 🤐 ", show_alert=False)
     elif "groupcb" in query.data:
         await query.answer()
 
@@ -385,7 +385,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 )
                 await query.answer('𝖢𝗁𝖾𝖼𝗄 𝗆𝗒 D𝗆 🤠 , I have sent you 😉', show_alert=True)#if Pm Mode ON 
         except UserIsBlocked:
-            await query.answer('Unblock the bot mahn ! 🤬🤬 ', show_alert=True)
+            await query.answer('aapne bot block kiya h > Please Unblock karo bot ko first ! 🤬🤬 ', show_alert=True)
         except PeerIdInvalid:
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
         except Exception as e:
