@@ -209,7 +209,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 except:
                     pass
             else:
-                await query.answer("are yrr khud ka Search karo!! 🤐 ", show_alert=False)
+                await query.answer("are yrr khud ka Search karo!! 🤐 ", show_alert=True)
     elif "groupcb" in query.data:
         await query.answer()
 
