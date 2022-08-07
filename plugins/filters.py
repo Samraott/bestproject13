@@ -51,18 +51,18 @@ async def addfilter(client, message):
         return
 
 
-    if len(args) < 2:
+    if len(args) < 1:
         await message.reply_text("Command Incomplete :(", quote=True)
         return
 
     extracted = split_quotes(args[1])
     text = extracted[0].lower()
 
-    if not message.reply_to_message and len(extracted) < 2:
+    if not message.reply_to_message and len(extracted) < 1:
         await message.reply_text("Add some content to save your filter!", quote=True)
         return
 
-    if (len(extracted) >= 2) and not message.reply_to_message:
+    if (len(extracted) >= 1) and not message.reply_to_message:
         reply_text, btn, alert = parser(extracted[1], text)
         fileid = None
         if not reply_text:
