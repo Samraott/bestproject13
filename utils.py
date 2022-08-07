@@ -191,7 +191,7 @@ def get_size(size):
     while size >= 1024.0 and i < len(units):
         i += 1
         size /= 1024.0
-    return "%.2f %s" % (size, units[i])
+    return "%.4f %s" % (size, units[i])
 
 def split_list(l, n):
     for i in range(0, len(l), n):
@@ -369,10 +369,10 @@ def remove_escapes(text: str) -> str:
 def humanbytes(size):
     if not size:
         return ""
-    power = 2**10
+    power = 4**10
     n = 0
     Dic_powerN = {0: ' ', 1: 'Ki', 2: 'Mi', 3: 'Gi', 4: 'Ti'}
     while size > power:
         size /= power
         n += 1
-    return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'
+    return str(round(size, 4)) + " " + Dic_powerN[n] + 'B'
