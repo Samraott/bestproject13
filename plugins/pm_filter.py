@@ -1210,9 +1210,9 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
             fmsg = await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))#Imdb Poster Code
         except Exception as e:
             logger.exception(e)
-            fmsg = await message.reply_photo(photo='https://telegra.ph/file/554a794b9561e924b7213.jpg', caption=cap, reply_markup=InlineKeyboardMarkup(btn))# fmsg = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn)) Use This code if you need only caption
+            fmsg = await message.reply_photo(photo='https://te.legra.ph/file/acc52241c4e78afad71a8.jpg', caption=cap, reply_markup=InlineKeyboardMarkup(btn))# fmsg = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn)) Use This code if you need only caption
     else:
-        fmsg = await message.reply_photo(photo='https://telegra.ph/file/554a794b9561e924b7213.jpg', caption=cap, reply_markup=InlineKeyboardMarkup(btn))# fmsg = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn)) Use This code if you need only caption
+        fmsg = await message.reply_photo(photo='https://te.legra.ph/file/acc52241c4e78afad71a8.jpg', caption=cap, reply_markup=InlineKeyboardMarkup(btn))# fmsg = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn)) Use This code if you need only caption
     
     await asyncio.sleep(DELETE_TIME)
     await fmsg.delete()
