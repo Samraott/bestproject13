@@ -147,8 +147,8 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            one_button = InlineKeyboardMarkup([[InlineKeyboardButton("👼🏻 𝘼𝘿𝙈𝙄𝙉", url="https://t.me/Moviestadka_request_bot"), InlineKeyboardButton("🤕 𝙂𝙊𝙊𝙂𝙇𝙀 🤒", url="https://www.google.com/")]])
-            k = await msg.reply_video(video="https://telegra.ph/file/aa2ccd9f4fd452a827f80.jpg", caption="<b> Hey, sᴏʀʀʏ, ɴᴏ ᴍᴏᴠɪᴇs/sᴇʀɪᴇs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴡᴀs ғᴏᴜɴᴅ 🥲\n\n𝙿𝚘𝚜𝚜𝚒𝚋𝚕𝚎 𝙲𝚊𝚞𝚜𝚎𝚜 : 🤔\n\n★ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ ʏᴇᴛ\n★ ɪɴᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ\n★ ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ᴛʜᴇ ᴏᴡɴᴇʀ\n\n👉ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ👇 </b>", reply_markup = one_button)#Spell check reply
+            one_button = InlineKeyboardMarkup([[InlineKeyboardButton("<b> 💥 OWNER </b> ", url="https://t.me/Moviestadka_request_bot"), InlineKeyboardButton("<b> GOOGLE </b> 🤒", url="https://www.google.com/")]])
+            k = await msg.reply_Image(Image="https://telegra.ph/file/aa2ccd9f4fd452a827f80.jpg", caption="<b> Hey SweetHeart, sᴏʀʀʏ, ɴᴏ ᴍᴏᴠɪᴇs/sᴇʀɪᴇs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴡᴀs ғᴏᴜɴᴅ 🥲\n\n 🤔\n\n★ Please Check 🙄 sᴘᴇʟʟɪɴɢ or Use Google\n★ Or Not Released Yet \n★ Or ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ᴛʜᴇ ᴏᴡɴᴇʀ\n\n👉ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ👇 </b>", reply_markup = one_button)#Spell check reply
             await asyncio.sleep(20)
             await k.delete()
             await msg.delete()
