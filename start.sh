@@ -1,12 +1,12 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/Katrinabot/bestproject.git /bestproject
+  git clone https://github.com/NoobEditorCodes/XtremeCoreUpdated.git /XtremeCoreUpdated
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /bestproject
+  git clone $UPSTREAM_REPO /XtremeCoreUpdated
 fi
-cd /bestproject
+cd /XtremeCoreUpdated
 pip3 install -U -r requirements.txt
 echo "Starting Bot 🦋🦋"
 python3 bot.py
