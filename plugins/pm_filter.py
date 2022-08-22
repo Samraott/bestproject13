@@ -66,7 +66,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"📂 [{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}#{query.from_user.id}'
+                    text=f"⭕ [{get_size(file.file_size)}] ➡️ {file.file_name}", callback_data=f'{pre}#{file.file_id}#{query.from_user.id}'
                 )
             ] 
             for file in files
@@ -75,10 +75,10 @@ async def next_page(bot, query):
         btn = [        
             [
                 InlineKeyboardButton(
-                    text=f"{file.file_name}", callback_data=f'{pre}#{file.file_id}#{query.from_user.id}'
+                    text=f"➡️ {file.file_name}", callback_data=f'{pre}#{file.file_id}#{query.from_user.id}'
                 ),
                 InlineKeyboardButton(
-                    text=f"📂[{get_size(file.file_size)}]",
+                    text=f"⭕ [{get_size(file.file_size)}]",
                     callback_data=f'{pre}_#{file.file_id}#{query.from_user.id}',
                 )
             ] 
@@ -169,7 +169,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     chat = await client.get_chat(grpid)
                     title = chat.title
                 except:
-                    await query.message.edit_text("Make sure I'm present in your group!! 🥴 \n\n@Updatesallmovies", quote=True)
+                    await query.message.edit_text("Make sure I'm present in your group!! 🥴 \n\n@moviescrown", quote=True)
                     return await query.answer('⏳Loading...')
             else:
                 await query.message.edit_text(
@@ -189,7 +189,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if (st.status == "creator") or (str(userid) in ADMINS):
             await del_all(query.message, grp_id, title)
         else:
-            await query.answer("You need to be Group Owner or an Auth User to do that! 😠 \n\n@Updatesallmovies", show_alert=True)
+            await query.answer("You need to be Group Owner or an Auth User to do that! 😠 \n\n@moviescrown", show_alert=True)
     elif query.data == "delallcancel":
         userid = query.from_user.id
         chat_type = query.message.chat.type
@@ -208,7 +208,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 except:
                     pass
             else:
-                await query.answer("are yrr khud ka Search karo!! 🤐 ", show_alert=False)
+                await query.answer("are yrr khud ka Search karo!! 🤐 ", show_alert=True)
     elif "groupcb" in query.data:
         await query.answer()
 
@@ -428,7 +428,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             msg = await client.send_cached_media(
                 chat_id=AUTH_CHANNEL,
                 file_id=file_id,
-                caption=f'<b>Hi 👋 {query.from_user.mention} \n☵☵☵☵☵☵☵☵☵☵☵☵☵\n\n</b>\n 📁 ➜ [alexa] <code> {title}</code>\n\n⚠️ This file will be deleted from here within 5 minute as it has copyright ... !!!\n\n⚡Requested Group {query.message.chat.title}',#Custom Caption
+                caption=f'<b>Hi 👋 {query.from_user.mention} \n☵☵☵☵☵☵☵☵☵☵☵☵☵\n\n</b>\n 📁 ➜ [alexa] <code> {title}</code>\n\n⚠️ This file will be deleted from here within 5 minute as it has copyright ... !!!\n\n⚡@moviescrown {query.message.chat.title}',#Custom Caption
                 protect_content=True if ident == "filep" else False 
             )
             msg1 = await query.message.reply(
@@ -1117,7 +1117,7 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                        text=f"📂[{get_size(file.file_size)}]{file.file_name}", 
+                        text=f"⭕ [{get_size(file.file_size)}]{file.file_name}", 
                         callback_data=f'{pre}#{file.file_id}#{msg.from_user.id if msg.from_user is not None else 0}'
                 )
             ] 
@@ -1131,7 +1131,7 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
                     callback_data=f'{pre}#{file.file_id}#{msg.from_user.id if msg.from_user is not None else 0}',
                 ),
                 InlineKeyboardButton(
-                    text=f"📂[{get_size(file.file_size)}]",
+                    text=f"⭕ [{get_size(file.file_size)}]",
                     callback_data=f'{pre}_#{file.file_id}#{msg.from_user.id if msg.from_user is not None else 0}',
                 )
             ]
