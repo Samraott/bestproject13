@@ -87,12 +87,12 @@ async def next_page(bot, query):
 
     btn.insert(0,
             [
-                InlineKeyboardButton("🎭 ᴍᴏᴠɪᴇs", url="https://t.me/Movies_Series_1159"),
-                InlineKeyboardButton("📢 ᴄʜᴀɴɴᴇʟ", url="https://t.me/Movies_Series_1159")
+                InlineKeyboardButton("🎭 ᴍᴏᴠɪᴇs", url="https://t.me/moviescrown"),
+                InlineKeyboardButton("📢 ᴄʜᴀɴɴᴇʟ", url="https://t.me/moviescrown")
             ])
 
     btn.insert(0, [
-        InlineKeyboardButton("📥 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 📥", url="https://t.me/Updatesallmovies")#unknown
+        InlineKeyboardButton("📥 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 📥", url="https://t.me/how_to_download_movie_from_bot/5")#unknown
     ])
 
     if 0 < offset <= 10:
@@ -443,7 +443,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                             InlineKeyboardButton('📥 𝖣𝗈𝗐𝗇𝗅𝗈𝖺𝖽 𝖫𝗂𝗇𝗄 📥', url = msg.link)
                         ],                       
                         [
-                            InlineKeyboardButton("⚠️𝖢𝖺𝗇'𝗍 𝖠𝖼𝖼𝖾𝗌𝗌 ❓ 𝖢𝗅𝗂𝖼𝗄 𝖧𝖾𝗋𝖾 ⚠️", url=f'https://t.me/Updatesallmovies')#Add Your url where the file need to come
+                            InlineKeyboardButton("⚠️𝖢𝖺𝗇'𝗍 𝖠𝖼𝖼𝖾𝗌𝗌 ❓ 𝖢𝗅𝗂𝖼𝗄 𝖧𝖾𝗋𝖾 ⚠️", url=f'https://t.me/how_to_download_movie_from_bot/5')#Add Your url where the file need to come
                         ]
                     ]
                 )
@@ -503,10 +503,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             'CAACAgIAAxkBAALfhWKhyQAB6dM3e7xjAzNaNkDcJvRusAAChxUAAj0PUEnem2b91sejvx4E',
             reply_markup=InlineKeyboardMarkup(
                 [[
-                    InlineKeyboardButton('📢 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ', url='https://t.me/Movies_Series_1159')
+                    InlineKeyboardButton('📢 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ', url='https://t.me/MOVIEOTTSAM')
                 ],[
-                    InlineKeyboardButton('🤖 ʙᴏᴛ ᴜᴘᴅᴀᴛᴇs', url='https://t.me/Updatesallmovies'),
-                    InlineKeyboardButton('👥 ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ', url='https://t.me/Movies_Series_1159')
+                    InlineKeyboardButton('🤖 ʙᴏᴛ ᴜᴘᴅᴀᴛᴇs', url='https://t.me/MOVIEOTTSAM'),
+                    InlineKeyboardButton('👥 ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ', url='https://t.me/moviescrown')
                 ],[
                     InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ʜᴇʀᴇ', switch_inline_query_current_chat='')
                 ],[
@@ -564,11 +564,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('👑 ᴅᴇᴠ 👑', callback_data='dev_dk'),
                 ],
                 [
-                    InlineKeyboardButton('⚙️ Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ ⚙️', callback_data='jns_maintains')
+                    InlineKeyboardButton('⚙️ Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ ⚙️', callback_data='sheffy_samra')
                 ],
                 [
-                    InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ', url=f'https://t.me/Updatesallmovies'),
-                    InlineKeyboardButton('🎭 ᴍᴏᴠɪᴇs', url=f'https://t.me/Movies_Series_1159')
+                    InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ', url=f'https://t.me/MOVIEOTTSAM'),
+                    InlineKeyboardButton('🎭 ᴍᴏᴠɪᴇs', url=f'https://t.me/moviescrown')
                 ],
                 [
                     InlineKeyboardButton('⏮️ ʙᴀᴄᴋ', callback_data='start')
@@ -585,8 +585,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('💎 ʙᴏss', url=f'https://t.me/Updatesallmovies'),
-                        InlineKeyboardButton('📯 sᴜᴘᴘᴏʀᴛ', url=f'https://t.me/Updatesallmovies')
+                        InlineKeyboardButton('💎 ʙᴏss', url=f'https://t.me/sheffy_samra'),
+                        InlineKeyboardButton('📯 sᴜᴘᴘᴏʀᴛ', url=f'https://t.me/MOVIEOTTSAM')
                     ],
                     [
                         InlineKeyboardButton('⏮️ ʙᴀᴄᴋ', callback_data='about_menu1'),
@@ -602,11 +602,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('🤴🏻 ᴏᴡɴᴇʀ', url=f'https://t.me/Updatesallmovies')
+                        InlineKeyboardButton('🤴🏻 ᴏᴡɴᴇʀ', url=f'https://t.me/sheffy_samra')
                     ],
                     [
-                        InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url=f'https://t.me/Updatesallmovies'),
-                        InlineKeyboardButton('🤝🏻 sᴜᴘᴘᴏʀᴛ', url=f'https://t.me/Updatesallmovies')
+                        InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url=f'https://t.me/MOVIEOTTSAM'),
+                        InlineKeyboardButton('🤝🏻 sᴜᴘᴘᴏʀᴛ', url=f'https://t.me/moviescrown')
                                              
                     ],
                     [
@@ -625,14 +625,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('🎀 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ', url='https://t.me/Movies_Series_1159')
+                        InlineKeyboardButton('🎀 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ', url='https://t.me/MOVIEOTTSAM')
                     ],
                     [
-                        InlineKeyboardButton('🎭 ᴍᴏᴠɪᴇs', url='https://t.me/Movies_Series_1159'),
-                        InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/Updatesallmovies')
+                        InlineKeyboardButton('🎭 ᴍᴏᴠɪᴇs', url='https://t.me/moviescrown'),
+                        InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/MOVIEOTTSAM')
                     ],
                     [
-                        InlineKeyboardButton('🤝🏻 sᴜᴘᴘᴏʀᴛ', url='https://t.me/Updatesallmovies')
+                        InlineKeyboardButton('🤝🏻 sᴜᴘᴘᴏʀᴛ', url='https://t.me/moviescrown')
                     ],
                     [
                         InlineKeyboardButton('⏮️ ʙᴀᴄᴋ', callback_data='about_menu1'),
@@ -648,13 +648,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('💸 unknown ʙᴏᴛᴢ', url=f'https://t.me/Updatesallmovies')
+                        InlineKeyboardButton('💸 unknown ʙᴏᴛᴢ', url=f'https://t.me/sheffy_samra')
                     ],
                     [
-                        InlineKeyboardButton('🤝🏻 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url=f'https://t.me/Updatesallmovies')
+                        InlineKeyboardButton('🤝🏻 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url=f'https://t.me/moviescrown')
                     ],                    
                     [
-                        InlineKeyboardButton('⏮️ ʙᴀᴄᴋ', callback_data='jns_maintains'),
+                        InlineKeyboardButton('⏮️ ʙᴀᴄᴋ', callback_data='sheffy_samra'),
                         InlineKeyboardButton('❌ ᴄʟᴏsᴇ', callback_data='close')
                     ]
                 ]
@@ -1083,7 +1083,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == 'filenos':
         await query.answer("=>I have only this much files 😰 \n To get more results do request as per tips 👉🏻 ", True)
     elif query.data == 'inform':
-        await query.answer("⚠︎ Information ⚠︎\n\nAfter 5 minutes this message will be automatically deleted\n\nIf you do not see the requested movie / series file, look at the next page\n\nⒸ @Updatesallmovies", True)
+        await query.answer("⚠︎ Information ⚠︎\n\nAfter 5 minutes this message will be automatically deleted\n\nIf you do not see the requested movie / series file, look at the next page\n\nⒸ @moviescrown", True)
     try: await query.answer('⏳Loading...') 
     except: pass
 
@@ -1140,12 +1140,12 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
 
     btn.insert(0,
             [
-                InlineKeyboardButton("🎭 ᴍᴏᴠɪᴇs ᴄᴏʟʟᴇᴄᴛɪᴏɴ", url="https://t.me/Movies_Series_1159"),
-                InlineKeyboardButton("💬 ᴍᴏᴠɪᴇ ʀᴇǫ", url="https://t.me/Movies_Series_1159")
+                InlineKeyboardButton("🎭 ᴍᴏᴠɪᴇs ᴄᴏʟʟᴇᴄᴛɪᴏɴ", url="https://t.me/moviescrown"),
+                InlineKeyboardButton("💬 ᴍᴏᴠɪᴇ ʀᴇǫ", url="https://t.me/moviescrown")
             ])
 
     btn.insert(0, [
-        InlineKeyboardButton("📥 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 📥", url="https://t.me/Updatesallmovies")
+        InlineKeyboardButton("📥 ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ 📥", url="https://t.me/how_to_download_movie_from_bot/5")
     ])
 
     if offset != "":
