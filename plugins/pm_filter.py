@@ -26,6 +26,8 @@ import logging
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 
+DELET_TIME = int(os.environ.get("DELET_TIME", "10"))
+
 BUTTONS = {}
 SPELL_CHECK = {}
 
@@ -147,9 +149,8 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            one_button = InlineKeyboardMarkup([[InlineKeyboardButton("<b> 💥 OWNER </b> ", url="https://t.me/Moviestadka_request_bot"), InlineKeyboardButton("<b> GOOGLE </b> 🤒", url="https://www.google.com/")]])
-            k = await msg.reply_Image(image="https://telegra.ph/file/aa2ccd9f4fd452a827f80.jpg", caption="<b> Hey SweetHeart, sᴏʀʀʏ, ɴᴏ ᴍᴏᴠɪᴇs/sᴇʀɪᴇs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴡᴀs ғᴏᴜɴᴅ 🥲\n\n 🤔\n\n★ Please Check 🙄 sᴘᴇʟʟɪɴɢ or Use Google\n★ Or Not Released Yet \n★ Or ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ᴛʜᴇ ᴏᴡɴᴇʀ\n\n👉ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ👇 </b>", reply_markup = one_button)#Spell check reply
-            await asyncio.sleep(20)
+            k = await query.message.edit('This Movie Not Found In DataBase')
+            await asyncio.sleep(10)
             await k.delete()
             await msg.delete()
 
@@ -1230,9 +1231,8 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        one_button = InlineKeyboardMarkup([[InlineKeyboardButton("<b>💥 OWNER 💥 </b>", url="https://t.me/Moviestadka_request_bot"), InlineKeyboardButton("<b>😎 GOOGLE 😎 </b>", url="https://www.google.com/")]])
-        k = await msg.reply_video(video="https://telegra.ph/file/aa2ccd9f4fd452a827f80.jpg", caption="<b> Hey SweetHeart, sᴏʀʀʏ, ɴᴏ ᴍᴏᴠɪᴇs/sᴇʀɪᴇs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴡᴀs ғᴏᴜɴᴅ 🥲\n\n 🤔\n\n★ Please Check 🙄 sᴘᴇʟʟɪɴɢ or Use Google\n★ Or Not Released Yet \n★ Or ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ᴛʜᴇ ᴏᴡɴᴇʀ\n\n👉ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ👇 </b>", reply_markup = one_button)
-        await asyncio.sleep(15)
+        k = await msg.reply("I couldn't find any movie in that name.")
+        await asyncio.sleep(8)
         await k.delete()
         await msg.delete()
         return
@@ -1261,9 +1261,8 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        one_button = InlineKeyboardMarkup([[InlineKeyboardButton("𝗔𝗗𝗠𝗜𝗡 🔥", url="https://t.me/Moviestadka_request_bot"), InlineKeyboardButton("🤕 𝗚𝗢𝗢𝗚𝗟𝗘 🤒", url="https://www.google.com/")]])
-        k = await msg.reply_Image(image="https://telegra.ph/file/aa2ccd9f4fd452a827f80.jpg", caption="<b> ʜᴇʏ, sᴏʀʀʏ, ɴᴏ ᴍᴏᴠɪᴇ/sᴇʀɪᴇs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴡᴏʀᴅ ᴡᴀs ғᴏᴜɴᴅ 🥲\n\nᴘᴏssɪʙʟᴇ ᴄᴀᴜsᴇs : 🤔\n\n★ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ ʏᴇᴛ\n★ ɪɴᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ\n★ ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ᴏᴡɴᴇʀ\n\n👉Contact To Group Admin👇 </b>", reply_markup = one_button)
-        await asyncio.sleep(20)
+        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
+        await asyncio.sleep(8)
         await k.delete()
         await msg.delete()
         return
@@ -1275,10 +1274,10 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    one_button = InlineKeyboardMarkup([[InlineKeyboardButton("𝗔𝗗𝗠𝗜𝗡 🔥", url="https://t.me/Moviestadka_request_bot"), InlineKeyboardButton("🤕 𝗚𝗢𝗢𝗚𝗟𝗘 🤒", url="https://www.google.com/")]])
-    k = await msg.reply_video(video="https://telegra.ph/file/aa2ccd9f4fd452a827f80.jpg", caption="<b> ʜᴇʏ, sᴏʀʀʏ, ɴᴏ ᴍᴏᴠɪᴇ/sᴇʀɪᴇs ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴇ ɢɪᴠᴇɴ ᴡᴏʀᴅ ᴡᴀs ғᴏᴜɴᴅ 🥲\n\nᴘᴏssɪʙʟᴇ ᴄᴀᴜsᴇs : 🤔\n\n★ ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ ʏᴇᴛ\n★ ɪɴᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ\n★ ɴᴏᴛ ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ ᴏᴡɴᴇʀ\n\n👉Contact To Group Admin👇 </b>", reply_markup = one_button)
-    await asyncio.sleep(20)
-    await k.delete()
+    mrhh = await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
+                    reply_markup=InlineKeyboardMarkup(btn))
+    await asyncio.sleep(DELET_TIME)
+    await mrhh.delete()
     await msg.delete()
     
     
