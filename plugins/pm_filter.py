@@ -443,7 +443,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                             InlineKeyboardButton('📥 𝖣𝗈𝗐𝗇𝗅𝗈𝖺𝖽 𝖫𝗂𝗇𝗄 📥', url = msg.link)
                         ],                       
                         [
-                            InlineKeyboardButton("⚠️𝖢𝖺𝗇'𝗍 𝖠𝖼𝖼𝖾𝗌𝗌 ❓ 𝖢𝗅𝗂𝖼𝗄 𝖧𝖾𝗋𝖾 ⚠️", url=f'https://t.me/how_to_download_movie_from_bot/5')#Add Your url where the file need to come
+                            InlineKeyboardButton("⚠️𝖢𝖺𝗇'𝗍 𝖠𝖼𝖼𝖾𝗌𝗌 ❓ 𝖢𝗅𝗂𝖼𝗄 𝖧𝖾𝗋𝖾 ⚠️", url=f'https://t.me/+ScJpeXy-sGIzNjFl')#Add Your url where the file need to come
+                            InlineKeyboardButton("⚠️ HOW TO DOWNLOAD ⚠️", url=f'https://t.me/how_to_download_movie_from_bot/5')#Add Your url where the file need to come
                         ]
                     ]
                 )
@@ -561,7 +562,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             'CAACAgIAAxkBAALfCGKgu_iyutqTf1v25x4ZW9QfoxrLAAKgFwAC37QgSSCArCK7IMbJHgQ',
             reply_markup=InlineKeyboardMarkup(
                 [[
-                    InlineKeyboardButton('👑 ᴅᴇᴠ 👑', callback_data='dev_dk'),
+                    InlineKeyboardButton('👑 ᴅᴇᴠ 👑', callback_data='sheffy_samra'),
                 ],
                 [
                     InlineKeyboardButton('⚙️ Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ ⚙️', callback_data='sheffy_samra')
