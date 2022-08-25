@@ -148,7 +148,7 @@ async def advantage_spoll_choker(bot, query):
             await auto_filter(bot, query, k)
         else:
             k = await query.message.edit('This Movie Not Found In DataBase')
-            await asyncio.sleep(10)
+            await asyncio.sleep(DELET_TIME)
             await k.delete()
             await msg.delete()
 
@@ -450,7 +450,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 )
             )
             await query.answer('ᴄʜᴇᴄᴋ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ🕵🏻‍♂️',)
-            await asyncio.sleep(300)
+            await asyncio.sleep(DELET_TIME)
             await msg1.delete()
             await msg.delete()
             del msg1, msg
@@ -504,9 +504,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             'CAACAgIAAxkBAALfhWKhyQAB6dM3e7xjAzNaNkDcJvRusAAChxUAAj0PUEnem2b91sejvx4E',
             reply_markup=InlineKeyboardMarkup(
                 [[
-                    InlineKeyboardButton('📢 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ', url='https://t.me/MOVIEOTTSAM')
+                    InlineKeyboardButton('📢 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ', url='https://t.me/moviescrown')
                 ],[
-                    InlineKeyboardButton('🤖 ʙᴏᴛ ᴜᴘᴅᴀᴛᴇs', url='https://t.me/MOVIEOTTSAM'),
+                    InlineKeyboardButton('🤖 ʙᴏᴛ ᴜᴘᴅᴀᴛᴇs', url='https://t.me/moviescrown'),
                     InlineKeyboardButton('👥 ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ', url='https://t.me/moviescrown')
                 ],[
                     InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ʜᴇʀᴇ', switch_inline_query_current_chat='')
@@ -568,7 +568,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('⚙️ Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ ⚙️', callback_data='sheffy_samra')
                 ],
                 [
-                    InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ', url=f'https://t.me/MOVIEOTTSAM'),
+                    InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ', url=f'https://t.me/moviescrown'),
                     InlineKeyboardButton('🎭 ᴍᴏᴠɪᴇs', url=f'https://t.me/moviescrown')
                 ],
                 [
@@ -587,7 +587,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 [
                     [
                         InlineKeyboardButton('💎 ʙᴏss', url=f'https://t.me/sheffy_samra'),
-                        InlineKeyboardButton('📯 sᴜᴘᴘᴏʀᴛ', url=f'https://t.me/MOVIEOTTSAM')
+                        InlineKeyboardButton('📯 sᴜᴘᴘᴏʀᴛ', url=https://t.me/moviescrown')
                     ],
                     [
                         InlineKeyboardButton('⏮️ ʙᴀᴄᴋ', callback_data='about_menu1'),
@@ -596,7 +596,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ]
             )
         )   
-    elif query.data == "dev_all1":
+    elif query.data == "sheffy_samra":
         await query.message.delete()
         await query.message.reply_sticker(
             'CAACAgUAAxkBAAEBH0hinPbKkK2Q1dNeMLOBxzDTaxk7XAAC5AIAAgX8WFYr5CVXDF0kuCQE',
@@ -606,7 +606,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         InlineKeyboardButton('🤴🏻 ᴏᴡɴᴇʀ', url=f'https://t.me/sheffy_samra')
                     ],
                     [
-                        InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url=f'https://t.me/MOVIEOTTSAM'),
+                        InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url=f'https://t.me/moviescrown'),
                         InlineKeyboardButton('🤝🏻 sᴜᴘᴘᴏʀᴛ', url=f'https://t.me/moviescrown')
                                              
                     ],
@@ -626,11 +626,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('🎀 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ', url='https://t.me/MOVIEOTTSAM')
+                        InlineKeyboardButton('🎀 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ', url='https://t.me/moviescrown')
                     ],
                     [
                         InlineKeyboardButton('🎭 ᴍᴏᴠɪᴇs', url='https://t.me/moviescrown'),
-                        InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/MOVIEOTTSAM')
+                        InlineKeyboardButton('🤖 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/moviescrown')
                     ],
                     [
                         InlineKeyboardButton('🤝🏻 sᴜᴘᴘᴏʀᴛ', url='https://t.me/moviescrown')
@@ -1231,7 +1231,7 @@ async def advantage_spell_chok(msg):
     gs_parsed = []
     if not g_s:
         k = await msg.reply("I couldn't find any movie in that name.")
-        await asyncio.sleep(8)
+        await asyncio.sleep(DELETE_TIME)
         await k.delete()
         await msg.delete()
         return
@@ -1261,7 +1261,7 @@ async def advantage_spell_chok(msg):
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
         k = await msg.reply("I couldn't find anything related to that. Check your spelling")
-        await asyncio.sleep(8)
+        await asyncio.sleep(DELETE_TIME)
         await k.delete()
         await msg.delete()
         return
