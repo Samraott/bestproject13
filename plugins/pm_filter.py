@@ -450,7 +450,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 )
             )
             await query.answer('ᴄʜᴇᴄᴋ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ🕵🏻‍♂️',)
-            await asyncio.sleep(DELET_TIME)
+            await asyncio.sleep(DELETE_TIME)
             await msg1.delete()
             await msg.delete()
             del msg1, msg
@@ -579,7 +579,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
         await query.answer('ᴀʙᴏᴜᴛ.......')
         
-    elif query.data == "dev_dk":
+    elif query.data == "sheffy_samra":
         await query.message.delete()
         await query.message.reply_sticker(
             'CAACAgUAAxkBAAEBGXJii6mtRyOdw_xwn73fNjpiO-EqcwACjAYAAlJuWVZyrxMDtBmVryQE',
@@ -619,7 +619,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ) 
         
         
-    elif query.data == "jns_maintains":
+    elif query.data == "sheffy_samra":
         await query.message.delete()
         await query.message.reply_sticker(
             'CAACAgIAAxkBAALdzGKbdOHcsMpnikpRm99pIAH_U0tYAALoFgAC_YsQStr2Fln0t1FAHgQ',
@@ -642,7 +642,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ]
             )
         ) 
-    elif query.data == "bros":
+    elif query.data == "sheffy_samra":
         await query.message.delete()
         await query.message.reply_sticker(
             'CAACAgUAAxkBAAEBGbZii8_lHTfWP78_U9HRRldy7EyA-QACKAUAAtE4WFQTdpC1zu7ZOSQE',
@@ -1203,25 +1203,25 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
         try:
            RAT = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
-           await asyncio.sleep(DELET_TIME)
+           await asyncio.sleep(DELETE_TIME)
            await RAT.delete()
            await message.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
            pic = imdb.get('poster')
            poster = pic.replace('.jpg', "._V1_UX360.jpg")
            NET = await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
-           await asyncio.sleep(DELET_TIME)
+           await asyncio.sleep(DELETE_TIME)
            await NET.delete()
            await message.delete()
         except Exception as e:
            logger.exception(e)
            ROOT = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-           await asyncio.sleep(DELET_TIME)
+           await asyncio.sleep(DELETE_TIME)
            await ROOT.delete()
            await message.delete()
     else:
         MKN = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(DELET_TIME)
+        await asyncio.sleep(DELETE_TIME)
         await MKN.delete()
         await message.delete()
     if spoll:
@@ -1282,7 +1282,7 @@ async def advantage_spell_chok(msg):
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
     mrhh = await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
                     reply_markup=InlineKeyboardMarkup(btn))
-    await asyncio.sleep(DELET_TIME)
+    await asyncio.sleep(DELETE_TIME)
     await mrhh.delete()
     await msg.delete()
     
@@ -1302,7 +1302,7 @@ async def manual_filters(client, message, text=False):
                     if fileid == "None":
                         if btn == "[]":
                             rockybai = await client.send_message(group_id, reply_text, disable_web_page_preview=True)
-                            await asyncio.sleep(DELET_TIME)
+                            await asyncio.sleep(DELETE_TIME)
                             await rockybai.delete()
                             await message.delete()                            
                         else:
@@ -1314,7 +1314,7 @@ async def manual_filters(client, message, text=False):
                                 reply_markup=InlineKeyboardMarkup(button),
                                 reply_to_message_id=reply_id
                             )
-                            await asyncio.sleep(DELET_TIME)
+                            await asyncio.sleep(DELETE_TIME)
                             await mkn.delete()
                             await message.delete()
                     elif btn == "[]":
@@ -1324,7 +1324,7 @@ async def manual_filters(client, message, text=False):
                             caption=reply_text or "",
                             reply_to_message_id=reply_id
                         )
-                        await asyncio.sleep(DELET_TIME)
+                        await asyncio.sleep(DELETE_TIME)
                         await jack.delete()
                         await message.delete()
                     else:
@@ -1335,7 +1335,7 @@ async def manual_filters(client, message, text=False):
                             reply_markup=InlineKeyboardMarkup(button),
                             reply_to_message_id=reply_id
                         )
-                        await asyncio.sleep(DELET_TIME)
+                        await asyncio.sleep(DELETE_TIME)
                         await brot.delete()
                         await message.delete()
                 except Exception as e:
