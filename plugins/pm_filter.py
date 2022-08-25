@@ -1198,25 +1198,32 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>💖<STRONG>{search}</STRONG>💝\n\n⚙️ Nᴏᴛᴇ:→𝗧𝗵𝗶𝘀 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 𝗪𝗶𝗹𝗹 𝗕𝗲 𝗔𝘂𝘁𝗼-𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗔𝗳𝘁𝗲𝗿 5 𝗠𝗶𝗻𝘂𝘁𝗲 𝗧𝗼 𝗔𝘃𝗼𝗶𝗱 𝗖𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 𝗜𝘀𝘀𝘂𝗲𝘀.</b> "
-     
+        cap = f"Here is what i found for your query {search}"
     if imdb and imdb.get('poster'):
         try:
-            fmsg = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],#Imdb Poster Code
+           RAT = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
+           await asyncio.sleep(DELET_TIME)
+           await RAT.delete()
+           await message.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
-            pic = imdb.get('poster')
-            poster = pic.replace('.jpg', "._V1_UX360.jpg")
-            fmsg = await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))#Imdb Poster Code
+           pic = imdb.get('poster')
+           poster = pic.replace('.jpg', "._V1_UX360.jpg")
+           NET = await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
+           await asyncio.sleep(DELET_TIME)
+           await NET.delete()
+           await message.delete()
         except Exception as e:
-            logger.exception(e)
-            fmsg = await message.reply_photo(photo='https://te.legra.ph/file/acc52241c4e78afad71a8.jpg', caption=cap, reply_markup=InlineKeyboardMarkup(btn))# fmsg = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn)) Use This code if you need only caption
+           logger.exception(e)
+           ROOT = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+           await asyncio.sleep(DELET_TIME)
+           await ROOT.delete()
+           await message.delete()
     else:
-        fmsg = await message.reply_photo(photo='https://te.legra.ph/file/acc52241c4e78afad71a8.jpg', caption=cap, reply_markup=InlineKeyboardMarkup(btn))# fmsg = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn)) Use This code if you need only caption
-    
-    await asyncio.sleep(DELETE_TIME)
-    await fmsg.delete()
-    await msg.delete()
+        MKN = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+        await asyncio.sleep(DELET_TIME)
+        await MKN.delete()
+        await message.delete()
     if spoll:
         await msg.message.delete()
 
@@ -1231,7 +1238,7 @@ async def advantage_spell_chok(msg):
     gs_parsed = []
     if not g_s:
         k = await msg.reply("I couldn't find any movie in that name.")
-        await asyncio.sleep(DELETE_TIME)
+        await asyncio.sleep(20)
         await k.delete()
         await msg.delete()
         return
@@ -1261,7 +1268,7 @@ async def advantage_spell_chok(msg):
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
         k = await msg.reply("I couldn't find anything related to that. Check your spelling")
-        await asyncio.sleep(DELETE_TIME)
+        await asyncio.sleep(20)
         await k.delete()
         await msg.delete()
         return
@@ -1290,23 +1297,26 @@ async def manual_filters(client, message, text=False):
         if re.search(pattern, name, flags=re.IGNORECASE):
             reply_text, btn, alert, fileid = await find_filter(group_id, keyword)
 
-            if reply_text:
-                reply_text = reply_text.replace("\\n", "\n").replace("\\t", "\t")
-
             if btn is not None:
                 try:
                     if fileid == "None":
                         if btn == "[]":
-                            await client.send_message(group_id, reply_text, disable_web_page_preview=True)
+                            rockybai = await client.send_message(group_id, reply_text, disable_web_page_preview=True)
+                            await asyncio.sleep(DELET_TIME)
+                            await rockybai.delete()
+                            await message.delete()                            
                         else:
                             button = eval(btn)
-                            await client.send_message(
+                            mkn = await client.send_message(
                                 group_id,
                                 reply_text,
                                 disable_web_page_preview=True,
                                 reply_markup=InlineKeyboardMarkup(button),
                                 reply_to_message_id=reply_id
                             )
+                            await asyncio.sleep(DELET_TIME)
+                            await mkn.delete()
+                            await message.delete()
                     elif btn == "[]":
                         await client.send_cached_media(
                             group_id,
@@ -1314,6 +1324,9 @@ async def manual_filters(client, message, text=False):
                             caption=reply_text or "",
                             reply_to_message_id=reply_id
                         )
+                        await asyncio.sleep(DELET_TIME)
+                        await jack.delete()
+                        await message.delete()
                     else:
                         button = eval(btn)
                         await message.reply_cached_media(
@@ -1322,9 +1335,11 @@ async def manual_filters(client, message, text=False):
                             reply_markup=InlineKeyboardMarkup(button),
                             reply_to_message_id=reply_id
                         )
+                        await asyncio.sleep(DELET_TIME)
+                        await brot.delete()
+                        await message.delete()
                 except Exception as e:
                     logger.exception(e)
                 break
     else:
         return False
-
